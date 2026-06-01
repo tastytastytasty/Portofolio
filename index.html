@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="OSSPH Freefolio - Anime Template" />
+    <meta
+      property="og:description"
+      content="100% FREE Professional Portfolio Templates - Anime Template"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://freefolio.web.app/anime" />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/HnWKRnDB/anime.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content="OSSPH Freefolio" />
+    <meta name="twitter:title" content="OSSPH Freefolio - Anime Template" />
+    <meta
+      name="twitter:description"
+      content="100% FREE Professional Portfolio Templates - Anime Template"
+    />
+
+    <!-- Icon -->
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="assets/terminal.png"
+    />
+    <!-- External CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+
+    <!-- Boxicons Script -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Portofolio | Muhamad Akmal Aji Tasti</title>
+  </head>
+  <div id="img-modal">
+    <div class="slider-arrows-modal">
+      <button class="modal-arrow" id="modal-prev">
+        <i class="bx bx-chevron-left ikon"></i>
+      </button>
+      <img id="modal-img" src="" alt="" />
+      <button class="modal-arrow" id="modal-next">
+        <i class="bx bx-chevron-right ikon"></i>
+      </button>
+    </div>
+    <p id="modal-desc"></p>
+  </div>
+  <body>
+    <!-- Start of Header -->
+    <header>
+      <a href="#" class="logo">Aku<span> Maru</span></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+        <li><a href="#home" data-lgn="nav_home">Beranda</a></li>
+        <li><a href="#about" data-lgn="nav_about">Tentang</a></li>
+        <li><a href="#resume" data-lgn="nav_resume">Pengalaman</a></li>
+        <li><a href="#projects" data-lgn="nav_projects">Projek</a></li>
+        <li><a href="#contact" data-lgn="nav_contact">Kontak</a></li>
+        <li>
+          <a href="" id="theme-toggle"
+            ><i class="bx bx-moon" id="theme-icon"></i
+          ></a>
+        </li>
+        <li class="lang-switcher">
+          <button data-lang="id" onclick="setLang('id')">ID</button>
+          <button data-lang="en" onclick="setLang('en')">EN</button>
+          <button data-lang="ja" onclick="setLang('ja')">JP</button>
+        </li>
+      </ul>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of Home Section -->
+    <section class="home" id="home">
+      <div class="home-text">
+        <h5 data-lgn="home_greet">Halo, Saya</h5>
+        <h1 data-lgn="home_name">Muhammad Akmal</h1>
+        <h6 data-lgn="home_desc">
+          <span>Software Developer</span> yang antusias dalam membangun aplikasi
+          berbasis web yang menarik dan mudah digunakan.
+        </h6>
+        <a href="#about" class="btn" data-lgn="home_more"
+          >Selengkapnya<i class="bx bx-chevron-right ikon"></i>
+        </a>
+      </div>
+
+      <div class="home-img">
+        <img src="img/Pasfoto.png" alt="anime" />
+      </div>
+    </section>
+    <!-- End of Home Section -->
+
+    <!-- Start of About Section -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="img/Pasfoto.png" alt="anime" />
+      </div>
+
+      <div class="about-text">
+        <h3 data-lgn="about_title">Tentang Saya</h3>
+        <h2 data-lgn="about_subtitle">Saya Software Developer.</h2>
+        <p data-lgn="about_description">
+          Seseorang yang memiliki ketertarikan dalam pengembangan aplikasi
+          berbasis web dengan berfokus pada kemudahan dan kenyamanan pengguna.
+          Selalu berusaha membangun tampilan dan alur yang sederhana, mudah
+          dipahami, serta nyaman digunakan oleh pengguna.
+        </p>
+
+        <div class="main-btn">
+          <a
+            href="#"
+            class="btn"
+            target="_blank"
+            id="cv-download"
+            data-lgn="about_cv"
+          >
+            Download CV<i class="bx bx-chevron-right ikon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- Start of Resume Section -->
+    <section class="resume" id="resume">
+      <div class="center">
+        <h3 data-lgn="resume_title">Pendidikan & Pengalaman</h3>
+      </div>
+
+      <div class="resume-content">
+        <!-- Education 01 -->
+        <div class="box">
+          <h6 data-lgn="resume_education_date">Juli 2023 - Juni 2026</h6>
+          <h4 data-lgn="resume_education_title">
+            Pendidikan Rekayasa Perangkat Lunak
+          </h4>
+          <p data-lgn="resume_education_description">
+            Mempelajari pengembangan aplikasi berbasis web, database, dan dasar
+            pemrograman.
+          </p>
+          <h5 data-lgn="resume_education_institution">
+            SMK TI Pembangunan Cimahi
+          </h5>
+        </div>
+        <!-- End of Education -->
+
+        <!-- Experience 01 -->
+        <div class="box">
+          <h6 data-lgn="resume_experience_date">Desember 2025 - April 2026</h6>
+          <h4 data-lgn="resume_experience_title">Praktik Kerja Lapangan</h4>
+          <p data-lgn="resume_experience_description">
+            Mengembangkan aplikasi <i>e-commerce</i> berbasis web menggunakan
+            PHP, CodeIgniter 3, dan MySQL.
+          </p>
+          <h5 data-lgn="resume_experience_institution">
+            PT Goldstep Teknologi Indonesia
+          </h5>
+        </div>
+        <!-- End of Experience -->
+      </div>
+    </section>
+    <!-- End of Resume Section -->
+
+    <!-- Start of Projects Section -->
+    <section class="projects" id="projects">
+      <div class="center">
+        <h3 data-lgn="projects_title">Projek</h3>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="service-content" id="track">
+          <!-- U-Taps -->
+          <div class="row">
+            <i class="bx bx-sneaker"></i>
+            <h3>U-Taps</h3>
+            <img
+              src="img/projek/Utaps/Utaps_beranda.png"
+              alt="U-Taps"
+              data-images='["img/projek/Utaps/Utaps_beranda.png", "img/projek/Utaps/Utaps_login.png", "img/projek/Utaps/Utaps_regis.png",
+              "img/projek/Utaps/Utaps_katalog.png", "img/projek/Utaps/Utaps_detail.png", "img/projek/Utaps/Utaps_about.png",
+              "img/projek/Utaps/Utaps_promo.png","img/projek/Utaps/Utaps_wishlist.png","img/projek/Utaps/Utaps_keranjang.png"]'
+            />
+            <p data-lgn="projects_utaps_desc">
+              Aplikasi e-commerce sepatu berbasis web yang menghadirkan
+              pengalaman belanja modern dengan tampilan responsif, navigasi yang
+              mudah, dan fitur yang mendukung kenyamanan pengguna.
+            </p>
+          </div>
+
+          <!-- Lelangku -->
+          <div class="row">
+            <i class="bx bx-gavel"></i>
+            <h3>Lelangku</h3>
+            <img src="img/about.jpg" alt="Lelangku" />
+            <p data-lgn="projects_lelangku_desc">
+              Aplikasi lelang berbasis web dengan tampilan sederhana dan
+              interaktif untuk memudahkan pengguna dalam melakukan penawaran
+              barang yang sedang di lelang.
+            </p>
+          </div>
+
+          <!-- Pembayaran SPP -->
+          <div class="row">
+            <i class="bx bx-credit-card"></i>
+            <h3>Pembayaran SPP</h3>
+            <img src="img/about.jpg" alt="Pembayaran SPP" />
+            <p data-lgn="projects_spp_desc">
+              Aplikasi pembayaran SPP berbasis web untuk membantu proses
+              pencatatan dan pengelolaan pembayaran siswa pada lembaga
+              pendidikan RA Darul Ikhlas secara lebih efisien.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-dots" id="dots"></div>
+
+      <div class="slider-arrows">
+        <button id="btn-prev"><i class="bx bx-chevron-left ikon"></i></button>
+        <button id="btn-next"><i class="bx bx-chevron-right ikon"></i></button>
+      </div>
+    </section>
+    <!-- End of Projects Section -->
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <h4 data-lgn="cta_text">Mari ciptakan produk yang bermanfaat bersama!</h4>
+      <a href="#contact" class="btn" data-lgn="cta_button">Hubungi Saya</a>
+    </section>
+    <!-- End of CTA Section -->
+
+    <!-- Start of Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact-center">
+        <h3 data-lgn="contact_title">Hubungi Saya</h3>
+      </div>
+
+      <div class="contact-form">
+        <form action="">
+          <input
+            type="text"
+            placeholder="Nama"
+            required
+            data-lgn-place="contact_name"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            data-lgn-place="contact_email"
+          />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Pesan"
+            required
+            data-lgn-place="contact_message"
+          ></textarea>
+          <input
+            type="submit"
+            value="Kirim Pesan"
+            class="send-btn"
+            data-lgn-value="contact_submit"
+          />
+        </form>
+      </div>
+    </section>
+    <!-- End of Contact Section -->
+
+    <!-- Start of Footer Section -->
+    <div class="footer">
+      <p>
+        Template made with
+        <i class="bx bxs-heart ikon" style="color: #1bc457"></i> by
+        <a
+          href="https://github.com/coder-ralph"
+          target="_blank"
+          style="color: #1bc457"
+          >Ralph Rosael</a
+        >
+      </p>
+    </div>
+    <!-- End of Footer Section -->
+
+    <!-- JS Script Link -->
+    <script src="assets/script.js"></script>
+  </body>
+</html>
