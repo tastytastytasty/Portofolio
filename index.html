@@ -56,6 +56,9 @@
     <title>Portofolio | Muhamad Akmal Aji Tasti</title>
   </head>
   <div id="img-modal">
+    <button id="modal-close">
+      <i class="bx bx-x ikon"></i>
+    </button>
     <div class="slider-arrows-modal">
       <button class="modal-arrow" id="modal-prev">
         <i class="bx bx-chevron-left ikon"></i>
@@ -192,6 +195,23 @@
 
       <div class="slider-wrapper">
         <div class="service-content" id="track">
+          <!-- Bad Habit Tracker -->
+          <div class="row">
+            <i class="bx bx-hourglass"></i>
+            <h3>Bad Habit Tracker</h3>
+            <img
+              src="img/projek/Bad Habit Tracker/Bad_habit_insert.png"
+              alt="Bad Habit Tracker"
+              data-images='["img/projek/Bad Habit Tracker/Bad_habit_insert.png", "img/projek/Bad Habit Tracker/Bad_habit_category.png", "img/projek/Bad Habit Tracker/Bad_habit_history.png"]'
+            />
+            <p data-lgn="projects_bad_habit_desc">
+              Aplikasi pelacak kebiasaan berbasis web yang membantu pengguna
+              memantau dan menganalisis waktu yang terbuang melalui tampilan
+              responsif, visualisasi data interaktif, serta fitur yang mendukung
+              peningkatan produktivitas.
+            </p>
+          </div>
+
           <!-- U-Taps -->
           <div class="row">
             <i class="bx bx-sneaker"></i>
@@ -295,6 +315,7 @@
             value="Kirim Pesan"
             class="send-btn"
             data-lgn-value="contact_submit"
+            onclick="alert('Belum fungsi mas, email aja => akmalajitasti@gmail.com'); return false;"
           />
         </form>
       </div>

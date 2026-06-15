@@ -95,7 +95,7 @@ const translations = {
     home_name: "Muhammad Akmal",
     home_desc:
       "<span>Software Developer</span> yang antusias dalam membangun aplikasi berbasis web yang menarik dan mudah digunakan.",
-    home_more: "Selengkapnya<i class=\"bx bx-chevron-right ikon\"></i>",
+    home_more: 'Selengkapnya<i class="bx bx-chevron-right ikon"></i>',
     about_title: "Tentang Saya",
     about_subtitle: "Saya Software Developer.",
     about_description:
@@ -112,6 +112,8 @@ const translations = {
       "Mengembangkan aplikasi <i>e-commerce</i> berbasis web menggunakan PHP, CodeIgniter 3, dan MySQL.",
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     projects_title: "Projek",
+    projects_bad_habit_desc:
+      "Aplikasi pelacak kebiasaan berbasis web yang membantu pengguna memantau dan menganalisis waktu yang terbuang melalui tampilan responsif, visualisasi data interaktif, serta fitur yang mendukung peningkatan produktivitas.",
     projects_utaps_desc:
       "Aplikasi e-commerce sepatu berbasis web yang menghadirkan pengalaman belanja modern dengan tampilan responsif, navigasi yang mudah, dan fitur yang mendukung kenyamanan pengguna.",
     projects_lelangku_desc:
@@ -137,7 +139,7 @@ const translations = {
     home_name: "Muhammad Akmal",
     home_desc:
       "<span>Software Developer</span> passionate about building attractive and easy-to-use web applications.",
-    home_more: "Learn More<i class=\"bx bx-chevron-right ikon\"></i>",
+    home_more: 'Learn More<i class="bx bx-chevron-right ikon"></i>',
     about_title: "About Me",
     about_subtitle: "I'm a Software Developer.",
     about_description:
@@ -154,6 +156,8 @@ const translations = {
       "Developing a web-based <i>e-commerce</i> application using PHP, CodeIgniter 3, and MySQL.",
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     projects_title: "Projects",
+    projects_bad_habit_desc:
+      "A web-based habit tracking application that helps users monitor and analyze time spent on unproductive activities through a responsive interface, interactive data visualizations, and features designed to encourage better productivity.",
     projects_utaps_desc:
       "A web-based shoe e-commerce app that delivers a modern shopping experience with a responsive design, easy navigation, and features built for user comfort.",
     projects_lelangku_desc:
@@ -179,7 +183,7 @@ const translations = {
     home_name: "Muhammad Akmal",
     home_desc:
       "<span>ソフトウェア開発者</span>で、魅力的で使いやすいWebアプリケーションの構築に情熱を持っています。",
-    home_more: "もっと見る<i class=\"bx bx-chevron-right ikon\"></i>",
+    home_more: 'もっと見る<i class="bx bx-chevron-right ikon"></i>',
     about_title: "私について",
     about_subtitle: "ソフトウェア開発者です。",
     about_description:
@@ -196,6 +200,8 @@ const translations = {
       "PHP、CodeIgniter 3、MySQLを使用したWebベースの<i>eコマース</i>アプリケーションを開発しました。",
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     projects_title: "プロジェクト",
+    projects_bad_habit_desc:
+      "非生産的な活動に費やした時間を記録・分析できるWebベースの習慣管理アプリです。レスポンシブなインターフェース、インタラクティブなデータ可視化機能、生産性向上をサポートする機能を備えています。",
     projects_utaps_desc:
       "レスポンシブデザイン、使いやすいナビゲーション、ユーザーの快適さを重視した機能を備えた、モダンなショッピング体験を提供するWebベースの靴ECアプリです。",
     projects_lelangku_desc:
@@ -228,32 +234,32 @@ function setLang(lang) {
 }
 
 function applyLang(lang) {
-  const t = translations[lang] || translations['id'];
+  const t = translations[lang] || translations["id"];
 
-  document.querySelectorAll('[data-lgn]').forEach(el => {
-    const key = el.getAttribute('data-lgn');
+  document.querySelectorAll("[data-lgn]").forEach((el) => {
+    const key = el.getAttribute("data-lgn");
     if (t[key]) el.textContent = t[key];
   });
 
-  document.querySelectorAll('[data-lgn]').forEach(el => {
-    const key = el.getAttribute('data-lgn');
+  document.querySelectorAll("[data-lgn]").forEach((el) => {
+    const key = el.getAttribute("data-lgn");
     if (t[key]) el.innerHTML = t[key];
   });
 
-  document.querySelectorAll('[data-lgn-place]').forEach(el => {
-    const key = el.getAttribute('data-lgn-place');
+  document.querySelectorAll("[data-lgn-place]").forEach((el) => {
+    const key = el.getAttribute("data-lgn-place");
     if (t[key]) el.placeholder = t[key];
   });
 
-  document.querySelectorAll('[data-lgn-value]').forEach(el => {
-    const key = el.getAttribute('data-lgn-value');
+  document.querySelectorAll("[data-lgn-value]").forEach((el) => {
+    const key = el.getAttribute("data-lgn-value");
     if (t[key]) el.value = t[key];
   });
 
-  const cvLink = document.getElementById('cv-download');
+  const cvLink = document.getElementById("cv-download");
   if (cvLink && cvFiles[lang]) {
     cvLink.href = cvFiles[lang];
-    cvLink.setAttribute('download', '');
+    cvLink.setAttribute("download", "");
   }
 }
 
@@ -262,6 +268,7 @@ setLang(savedLang);
 
 // Image Modal
 const modal = document.getElementById("img-modal");
+const modalClose = document.getElementById("modal-close");
 const modalImg = document.getElementById("modal-img");
 const modalDesc = document.getElementById("modal-desc");
 const modalPrev = document.getElementById("modal-prev");
@@ -300,7 +307,8 @@ document.querySelectorAll(".row img").forEach((img) => {
 
 modalPrev.addEventListener("click", (e) => {
   e.stopPropagation();
-  const newIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  const newIndex =
+    (currentIndex - 1 + currentImages.length) % currentImages.length;
   showImage(newIndex);
 });
 
@@ -308,6 +316,11 @@ modalNext.addEventListener("click", (e) => {
   e.stopPropagation();
   const newIndex = (currentIndex + 1) % currentImages.length;
   showImage(newIndex);
+});
+
+modalClose.addEventListener("click", function (e) {
+  e.stopPropagation();
+  modal.style.display = "none";
 });
 
 modal.addEventListener("click", (e) => {
