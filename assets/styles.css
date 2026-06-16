@@ -434,6 +434,47 @@ section {
   transform: translateY(-15px);
 }
 
+
+#cert-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+#cert-modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  display: block;
+}
+
+#cert-modal-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: 1px solid var(--main-color);
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 10000;
+  line-height: 1;
+}
+
+#cert-modal-close:hover {
+  background: var(--main-color);
+}
+
 /* CTA Section */
 .cta {
   background: var(--card-color);

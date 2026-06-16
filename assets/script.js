@@ -1,69 +1,85 @@
 // Carousel
-const track = document.getElementById("track");
-const dotsContainer = document.getElementById("dots");
-const btnPrev = document.getElementById("btn-prev");
-const btnNext = document.getElementById("btn-next");
-const cards = track.children;
-let current = 0;
-let visibleCount;
-let total;
-let dots;
-let currentOffset = 0;
+function initSlider({ trackId, dotsId, prevId, nextId }) {
+  const track = document.getElementById(trackId);
+  const dotsContainer = document.getElementById(dotsId);
+  const btnPrev = document.getElementById(prevId);
+  const btnNext = document.getElementById(nextId);
+  const cards = track.children;
+  let current = 0;
+  let visibleCount;
+  let total;
+  let dots;
+  let currentOffset = 0;
 
-function getVisibleCount() {
-  return window.innerWidth < 768 ? 1 : 2;
-}
-
-function buildDots() {
-  dotsContainer.innerHTML = "";
-  visibleCount = getVisibleCount();
-  total = Math.ceil(cards.length / visibleCount);
-  current = 0;
-  currentOffset = 0;
-  track.style.transform = "translateX(0)";
-
-  for (let i = 0; i < total; i++) {
-    const dot = document.createElement("span");
-    dot.classList.add("dot");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goTo(i));
-    dotsContainer.appendChild(dot);
+  function getVisibleCount() {
+    return window.innerWidth < 768 ? 1 : 2;
   }
 
-  dots = dotsContainer.querySelectorAll(".dot");
-}
+  function buildDots() {
+    dotsContainer.innerHTML = "";
+    visibleCount = getVisibleCount();
+    total = Math.ceil(cards.length / visibleCount);
+    current = 0;
+    currentOffset = 0;
+    track.style.transform = "translateX(0)";
 
-function goTo(idx) {
-  current = idx;
-  const totalCards = cards.length;
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
 
-  let startIndex = current * visibleCount;
-  if (startIndex + visibleCount > totalCards) {
-    startIndex = totalCards - visibleCount;
+    dots = dotsContainer.querySelectorAll(".dot");
   }
 
-  track.style.transform = "translateX(0)";
+  function goTo(idx) {
+    current = idx;
+    const totalCards = cards.length;
 
-  const trackLeft = track.getBoundingClientRect().left;
-  const cardLeft = cards[startIndex].getBoundingClientRect().left;
-  currentOffset = cardLeft - trackLeft;
+    let startIndex = current * visibleCount;
+    if (startIndex + visibleCount > totalCards) {
+      startIndex = totalCards - visibleCount;
+    }
 
-  track.style.transform = `translateX(-${currentOffset}px)`;
-  dots.forEach((d, i) => d.classList.toggle("active", i === current));
+    track.style.transform = "translateX(0)";
+
+    const trackLeft = track.getBoundingClientRect().left;
+    const cardLeft = cards[startIndex].getBoundingClientRect().left;
+    currentOffset = cardLeft - trackLeft;
+
+    track.style.transform = `translateX(-${currentOffset}px)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+  }
+
+  function next() {
+    goTo((current + 1) % total);
+  }
+  function prev() {
+    goTo((current - 1 + total) % total);
+  }
+
+  btnPrev.addEventListener("click", prev);
+  btnNext.addEventListener("click", next);
+
+  buildDots();
+  window.addEventListener("resize", buildDots);
 }
 
-function next() {
-  goTo((current + 1) % total);
-}
-function prev() {
-  goTo((current - 1 + total) % total);
-}
+initSlider({
+  trackId: "track-projek",
+  dotsId: "dots-projek",
+  prevId: "btn-prev-projek",
+  nextId: "btn-next-projek",
+});
 
-btnPrev.addEventListener("click", prev);
-btnNext.addEventListener("click", next);
-
-buildDots();
-window.addEventListener("resize", buildDots);
+initSlider({
+  trackId: "track-sertifikat",
+  dotsId: "dots-sertifikat",
+  prevId: "btn-prev-sertifikat",
+  nextId: "btn-next-sertifikat",
+});
 
 // Theme Toggle
 const btn = document.getElementById("theme-toggle");
@@ -90,6 +106,7 @@ const translations = {
     nav_portfolio: "Portofolio",
     nav_projects: "Projek",
     nav_resume: "Pengalaman",
+    nav_certificate: "Sertifikat",
     nav_contact: "Kontak",
     home_greet: "Halo, Saya",
     home_name: "Muhammad Akmal",
@@ -111,6 +128,7 @@ const translations = {
     resume_experience_description:
       "Mengembangkan aplikasi <i>e-commerce</i> berbasis web menggunakan PHP, CodeIgniter 3, dan MySQL.",
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
+    certificate_title: "Sertifikat",
     projects_title: "Projek",
     projects_bad_habit_desc:
       "Aplikasi pelacak kebiasaan berbasis web yang membantu pengguna memantau dan menganalisis waktu yang terbuang melalui tampilan responsif, visualisasi data interaktif, serta fitur yang mendukung peningkatan produktivitas.",
@@ -133,6 +151,7 @@ const translations = {
     nav_about: "About",
     nav_portfolio: "Portfolio",
     nav_projects: "Projects",
+    nav_certificate: "Certificates",
     nav_resume: "Experience",
     nav_contact: "Contact",
     home_greet: "Hi, I'm",
@@ -155,6 +174,7 @@ const translations = {
     resume_experience_description:
       "Developing a web-based <i>e-commerce</i> application using PHP, CodeIgniter 3, and MySQL.",
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
+    certificate_title: "Certificates",
     projects_title: "Projects",
     projects_bad_habit_desc:
       "A web-based habit tracking application that helps users monitor and analyze time spent on unproductive activities through a responsive interface, interactive data visualizations, and features designed to encourage better productivity.",
@@ -176,6 +196,7 @@ const translations = {
     nav_home: "ホーム",
     nav_about: "について",
     nav_portfolio: "ポートフォリオ",
+    nav_certificate: "証書",
     nav_projects: "プロジェクト",
     nav_resume: "経験",
     nav_contact: "お問い合わせ",
@@ -199,6 +220,7 @@ const translations = {
     resume_experience_description:
       "PHP、CodeIgniter 3、MySQLを使用したWebベースの<i>eコマース</i>アプリケーションを開発しました。",
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
+    certificate_title: "証書",
     projects_title: "プロジェクト",
     projects_bad_habit_desc:
       "非生産的な活動に費やした時間を記録・分析できるWebベースの習慣管理アプリです。レスポンシブなインターフェース、インタラクティブなデータ可視化機能、生産性向上をサポートする機能を備えています。",
@@ -265,6 +287,29 @@ function applyLang(lang) {
 
 const savedLang = localStorage.getItem("lang") || "id";
 setLang(savedLang);
+//Cert Modal
+const certModal = document.getElementById("cert-modal");
+const certModalImg = document.getElementById("cert-modal-img");
+const certModalClose = document.getElementById("cert-modal-close");
+
+document.querySelectorAll(".sertifikat-row img").forEach((img) => {
+  img.addEventListener("click", () => {
+    certModalImg.src = img.src;
+    certModalImg.alt = img.alt;
+    certModal.style.display = "flex";
+  });
+});
+
+certModalClose.addEventListener("click", (e) => {
+  e.stopPropagation();
+  certModal.style.display = "none";
+});
+
+certModal.addEventListener("click", (e) => {
+  if (e.target === certModal) {
+    certModal.style.display = "none";
+  }
+});
 
 // Image Modal
 const modal = document.getElementById("img-modal");
