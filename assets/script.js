@@ -4,6 +4,9 @@ function initSlider({ trackId, dotsId, prevId, nextId }) {
   const dotsContainer = document.getElementById(dotsId);
   const btnPrev = document.getElementById(prevId);
   const btnNext = document.getElementById(nextId);
+
+  if (!track || !dotsContainer || !btnPrev || !btnNext) return;
+
   const cards = track.children;
   let current = 0;
   let visibleCount;
@@ -82,21 +85,25 @@ initSlider({
 });
 
 // Theme Toggle
-const btn = document.getElementById("theme-toggle");
-const icon = document.getElementById("theme-icon");
+function initTheme() {
+  const btn = document.getElementById("theme-toggle");
+  const icon = document.getElementById("theme-icon");
 
-if (localStorage.getItem("theme") === "light") {
-  document.body.classList.add("light-mode");
-  icon.className = "bx bx-sun";
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    if (icon) icon.className = "bx bx-sun";
+  }
+
+  if (btn) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.toggle("light-mode");
+      const isLight = document.body.classList.contains("light-mode");
+      if (icon) icon.className = isLight ? "bx bx-sun" : "bx bx-moon";
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    });
+  }
 }
-
-btn.addEventListener("click", (e) => {
-  e.preventDefault();
-  document.body.classList.toggle("light-mode");
-  const isLight = document.body.classList.contains("light-mode");
-  icon.className = isLight ? "bx bx-sun" : "bx bx-moon";
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-});
 
 // Language Options
 const translations = {
@@ -145,6 +152,11 @@ const translations = {
     contact_email: "Email",
     contact_message: "Pesan",
     contact_submit: "Kirim Pesan",
+    thanksTitle: "Terima kasih!",
+    thanksDesc:
+      "Email kamu sudah berhasil terkirim dan masuk ke kotak masuk saya.",
+    thanksBtn: "Kembali ke Halaman Utama",
+    thanksFootnote: "Ditunggu kolaborasinya ✦ sampai jumpa di pesan berikutnya",
   },
   en: {
     nav_home: "Home",
@@ -191,6 +203,11 @@ const translations = {
     contact_email: "Email",
     contact_message: "Message",
     contact_submit: "Send Message",
+    thanksTitle: "Thank you!",
+    thanksDesc: "Your email has been successfully sent and is now in my inbox.",
+    thanksBtn: "Back to Home",
+    thanksFootnote:
+      "Looking forward to collaborating ✦ see you in the next message",
   },
   ja: {
     nav_home: "ホーム",
@@ -237,6 +254,12 @@ const translations = {
     contact_email: "メールアドレス",
     contact_message: "メッセージ",
     contact_submit: "送信する",
+    thanksTitle: "送信ありがとうございました！",
+    thanksDesc:
+      "メッセージは正常に送信されました。内容を確認のうえ、折り返しご連絡いたします。",
+    thanksBtn: "ホームへ戻る",
+    thanksFootnote:
+      "今後のご協力を楽しみにしております ✦ またのご連絡をお待ちしております。",
   },
 };
 const cvFiles = {
@@ -246,22 +269,8 @@ const cvFiles = {
 };
 
 // Language Toggle
-function setLang(lang) {
-  localStorage.setItem("lang", lang);
-  applyLang(lang);
-
-  document.querySelectorAll(".lang-switcher button").forEach((btn) => {
-    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
-  });
-}
-
 function applyLang(lang) {
   const t = translations[lang] || translations["id"];
-
-  document.querySelectorAll("[data-lgn]").forEach((el) => {
-    const key = el.getAttribute("data-lgn");
-    if (t[key]) el.textContent = t[key];
-  });
 
   document.querySelectorAll("[data-lgn]").forEach((el) => {
     const key = el.getAttribute("data-lgn");
@@ -283,120 +292,171 @@ function applyLang(lang) {
     cvLink.href = cvFiles[lang];
     cvLink.setAttribute("download", "");
   }
+
+  document.documentElement.setAttribute("lang", lang);
 }
 
-const savedLang = localStorage.getItem("lang") || "id";
-setLang(savedLang);
-//Cert Modal
-const certModal = document.getElementById("cert-modal");
-const certModalImg = document.getElementById("cert-modal-img");
-const certModalClose = document.getElementById("cert-modal-close");
+function setLang(lang) {
+  localStorage.setItem("lang", lang);
+  applyLang(lang);
 
-document.querySelectorAll(".sertifikat-row img").forEach((img) => {
-  img.addEventListener("click", () => {
-    certModalImg.src = img.src;
-    certModalImg.alt = img.alt;
-    certModal.style.display = "flex";
+  document.querySelectorAll(".lang-switcher button").forEach((btn) => {
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
   });
+}
+
+function initLang() {
+  const savedLang = localStorage.getItem("lang") || "id";
+  setLang(savedLang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+  initLang();
+  initCertModal();
+  initImageModal();
+  initMenuToggle();
+  initScrollReveal();
 });
 
-certModalClose.addEventListener("click", (e) => {
-  e.stopPropagation();
-  certModal.style.display = "none";
-});
+// Cert Modal
+function initCertModal() {
+  const certModal = document.getElementById("cert-modal");
+  const certModalImg = document.getElementById("cert-modal-img");
+  const certModalClose = document.getElementById("cert-modal-close");
+  const certImages = document.querySelectorAll(".sertifikat-row img");
 
-certModal.addEventListener("click", (e) => {
-  if (e.target === certModal) {
+  if (!certModal || !certModalImg || !certModalClose) return;
+
+  certImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      certModalImg.src = img.src;
+      certModalImg.alt = img.alt;
+      certModal.style.display = "flex";
+    });
+  });
+
+  certModalClose.addEventListener("click", (e) => {
+    e.stopPropagation();
     certModal.style.display = "none";
-  }
-});
+  });
+
+  certModal.addEventListener("click", (e) => {
+    if (e.target === certModal) {
+      certModal.style.display = "none";
+    }
+  });
+}
 
 // Image Modal
-const modal = document.getElementById("img-modal");
-const modalClose = document.getElementById("modal-close");
-const modalImg = document.getElementById("modal-img");
-const modalDesc = document.getElementById("modal-desc");
-const modalPrev = document.getElementById("modal-prev");
-const modalNext = document.getElementById("modal-next");
+function initImageModal() {
+  const modal = document.getElementById("img-modal");
+  const modalClose = document.getElementById("modal-close");
+  const modalImg = document.getElementById("modal-img");
+  const modalDesc = document.getElementById("modal-desc");
+  const modalPrev = document.getElementById("modal-prev");
+  const modalNext = document.getElementById("modal-next");
 
-let currentImages = [];
-let currentIndex = 0;
+  if (
+    !modal ||
+    !modalClose ||
+    !modalImg ||
+    !modalDesc ||
+    !modalPrev ||
+    !modalNext
+  )
+    return;
 
-function showImage(index) {
-  currentIndex = index;
-  modalImg.src = currentImages[currentIndex];
+  let currentImages = [];
+  let currentIndex = 0;
 
-  const hasMultiple = currentImages.length > 1;
-  modalPrev.style.display = hasMultiple ? "flex" : "none";
-  modalNext.style.display = hasMultiple ? "flex" : "none";
+  function showImage(index) {
+    currentIndex = index;
+    modalImg.src = currentImages[currentIndex];
 
-  const counter = document.getElementById("modal-counter");
-  if (counter) {
-    counter.textContent = hasMultiple
-      ? `${currentIndex + 1} / ${currentImages.length}`
-      : "";
+    const hasMultiple = currentImages.length > 1;
+    modalPrev.style.display = hasMultiple ? "flex" : "none";
+    modalNext.style.display = hasMultiple ? "flex" : "none";
+
+    const counter = document.getElementById("modal-counter");
+    if (counter) {
+      counter.textContent = hasMultiple
+        ? `${currentIndex + 1} / ${currentImages.length}`
+        : "";
+    }
   }
+
+  document.querySelectorAll(".row img").forEach((img) => {
+    img.addEventListener("click", () => {
+      const raw = img.getAttribute("data-images");
+      currentImages = raw ? JSON.parse(raw) : [img.src];
+      currentIndex = 0;
+
+      modalDesc.textContent = img
+        .closest(".row")
+        .querySelector("p").textContent;
+      modal.style.display = "flex";
+      showImage(0);
+    });
+  });
+
+  modalPrev.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const newIndex =
+      (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showImage(newIndex);
+  });
+
+  modalNext.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const newIndex = (currentIndex + 1) % currentImages.length;
+    showImage(newIndex);
+  });
+
+  modalClose.addEventListener("click", function (e) {
+    e.stopPropagation();
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 }
 
-document.querySelectorAll(".row img").forEach((img) => {
-  img.addEventListener("click", () => {
-    const raw = img.getAttribute("data-images");
-    currentImages = raw ? JSON.parse(raw) : [img.src];
-    currentIndex = 0;
-
-    modalDesc.textContent = img.closest(".row").querySelector("p").textContent;
-    modal.style.display = "flex";
-    showImage(0);
-  });
-});
-
-modalPrev.addEventListener("click", (e) => {
-  e.stopPropagation();
-  const newIndex =
-    (currentIndex - 1 + currentImages.length) % currentImages.length;
-  showImage(newIndex);
-});
-
-modalNext.addEventListener("click", (e) => {
-  e.stopPropagation();
-  const newIndex = (currentIndex + 1) % currentImages.length;
-  showImage(newIndex);
-});
-
-modalClose.addEventListener("click", function (e) {
-  e.stopPropagation();
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
 // Menu Toggle
-let menu = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
+function initMenuToggle() {
+  let menu = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".navbar");
 
-menu.onclick = () => {
-  menu.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
+  if (!menu || !navbar) return;
 
-window.onscroll = () => {
-  menu.classList.remove("bx-x");
-  navbar.classList.remove("active");
-};
+  menu.onclick = () => {
+    menu.classList.toggle("bx-x");
+    navbar.classList.toggle("active");
+  };
 
-const sr = ScrollReveal({
-  distance: "60px",
-  duration: 2500,
-  reset: true,
-});
+  window.onscroll = () => {
+    menu.classList.remove("bx-x");
+    navbar.classList.remove("active");
+  };
+}
 
-sr.reveal(".home-text", { delay: 200, origin: "top" });
-sr.reveal(".home-img", { delay: 400, origin: "top" });
-sr.reveal(".about, .cta, .resume, .contact, .footer", {
-  delay: 200,
-  origin: "top",
-});
+// Scroll Reveal
+function initScrollReveal() {
+  if (typeof ScrollReveal === "undefined") return;
+
+  const sr = ScrollReveal({
+    distance: "60px",
+    duration: 2500,
+    reset: true,
+  });
+
+  sr.reveal(".home-text", { delay: 200, origin: "top" });
+  sr.reveal(".home-img", { delay: 400, origin: "top" });
+  sr.reveal(".about, .cta, .resume, .contact, .footer", {
+    delay: 200,
+    origin: "top",
+  });
+}

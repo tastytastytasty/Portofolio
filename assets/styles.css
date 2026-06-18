@@ -76,6 +76,69 @@ span {
   transition: 0.3s;
 }
 
+body.thanks-page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  max-width: 480px;
+  width: 100%;
+  padding: 3rem 2.2rem;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: var(--h2-font);
+  margin-bottom: 1rem;
+}
+
+.card h1 .accent {
+  color: var(--main-color);
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--main-color);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card p {
+  font-size: var(--p-font);
+  color: var(--2nd-main-color);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.footnote {
+  margin-top: 1.8rem;
+  font-size: 0.85rem;
+  color: var(--2nd-main-color);
+}
+
 #menu-icon {
   font-size: 28px;
   z-index: 10001;

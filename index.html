@@ -202,9 +202,18 @@
 
       <div class="slider-wrapper">
         <div class="service-content" id="track-sertifikat">
+          <!-- Intro to Software Engineering Certificate -->
+          <div class="row sertifikat-row">
+            <h3>Intro to Software Engineering by Revou</h3>
+            <img
+              src="img/sertifikat/CCSE_akmalajitastigmail.com_CCSE-080626-01-1-00092_page-0001.jpg"
+              alt="Introduction to C++ Certificate"
+            />
+          </div>
+
           <!-- Introduction to C++ Certificate -->
           <div class="row sertifikat-row">
-            <h3>Introduction to C++ Certificate</h3>
+            <h3>Introduction to C++ by Sololearn</h3>
             <img
               src="img/sertifikat/Introduction to C++_certificate.jpg"
               alt="Introduction to C++ Certificate"
@@ -213,7 +222,7 @@
           
           <!-- Introduction to JavaScript Certificate -->
           <div class="row sertifikat-row">
-            <h3>Introduction to JavaScript Certificate</h3>
+            <h3>Introduction to JavaScript by Sololearn</h3>
             <img
               src="img/sertifikat/Introduction to JavaScript_certificate.jpg"
               alt="Introduction to JavaScript Certificate"
@@ -222,7 +231,7 @@
           
           <!-- Introduction to C# Certificate -->
           <div class="row sertifikat-row">
-            <h3>Introduction to C# Certificate</h3>
+            <h3>Introduction to C# by Sololearn</h3>
             <img
               src="img/sertifikat/Introduction to C%23_certificate.jpg"
               alt="Introduction to C# Certificate"
@@ -231,7 +240,7 @@
 
           <!-- Introduction to Python Certificate -->
           <div class="row sertifikat-row">
-            <h3>Introduction to Python Certificate</h3>
+            <h3>Introduction to Python by Sololearn</h3>
             <img
               src="img/sertifikat/Introduction to Python_certificate.jpg"
               alt="Introduction to Python Certificate"
@@ -240,7 +249,7 @@
           
           <!-- Introduction to Java Certificate -->
           <div class="row sertifikat-row">
-            <h3>Introduction to Java Certificate</h3>
+            <h3>Introduction to Java Certificate by Sololearn</h3>
             <img
               src="img/sertifikat/Introduction to Java_certificate.jpg"
               alt="Introduction to Java Certificate"
@@ -365,38 +374,13 @@
       </div>
 
       <div class="contact-form">
-        <form action="">
-          <input
-            type="text"
-            placeholder="Nama"
-            required
-            data-lgn-place="contact_name"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            data-lgn-place="contact_email"
-          />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Pesan"
-            required
-            data-lgn-place="contact_message"
-          ></textarea>
-          <input
-            type="submit"
-            value="Kirim Pesan"
-            class="send-btn"
-            data-lgn-value="contact_submit"
-            onclick="
-              alert('Belum fungsi mas, email aja => akmalajitasti@gmail.com');
-              return false;
-            "
-          />
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d5757290-0983-4e33-89ad-43d0948263eb">
+          <input type="text" name="name" placeholder="Nama" required data-lgn-place="contact_name">
+          <input type="email" name="email" placeholder="Email" required data-lgn-place="contact_email">
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Pesan" required
+            data-lgn-place="contact_message"></textarea>
+          <input type="submit" value="Kirim Pesan" class="send-btn" data-lgn-value="contact_submit">
         </form>
       </div>
     </section>
