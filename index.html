@@ -55,21 +55,60 @@
 
     <title>Portofolio | Muhamad Akmal Aji Tasti</title>
   </head>
+  <!-- Modal for Image Slider -->
   <div id="img-modal">
     <button id="modal-close">
       <i class="bx bx-x ikon"></i>
     </button>
-    <div class="slider-arrows-modal">
-      <button class="modal-arrow" id="modal-prev">
-        <i class="bx bx-chevron-left ikon"></i>
-      </button>
-      <img id="modal-img" src="" alt="" />
-      <button class="modal-arrow" id="modal-next">
-        <i class="bx bx-chevron-right ikon"></i>
-      </button>
+    <div id="modal-content">
+      <div class="slider-arrows-modal">
+        <button id="modal-prev">
+          <i class="bx bx-chevron-left ikon"></i>
+        </button>
+        <img id="modal-img" src="" alt="" />
+        <button id="modal-next">
+          <i class="bx bx-chevron-right ikon"></i>
+        </button>
+      </div>
+      <div id="modal-info">
+        <h3 id="modal-title"></h3>
+        <div id="modal-chips"></div>
+        <p id="modal-desc"></p>
+        <button id="btn-selengkapnya">
+          <span data-lgn="modal_selengkapnya">Selengkapnya</span>
+          <i class="bx bx-chevron-down"></i>
+        </button>
+        <div id="modal-detail">
+          <div class="modal-detail-section">
+            <p class="modal-detail-label" data-lgn="modal_latar_belakang">Latar belakang</p>
+            <p id="detail-alasan"></p>
+          </div>
+          <div class="modal-detail-section">
+            <p class="modal-detail-label" data-lgn="modal_tech_stack">Tech stack</p>
+            <div id="detail-stack"></div>
+          </div>
+          <div class="modal-detail-section">
+            <p class="modal-detail-label" data-lgn="modal_info_projek">Info proyek</p>
+            <div class="modal-meta-row">
+              <div class="modal-meta-item">
+                <span id="detail-tahun"></span>
+                <span data-lgn="modal_tahun">Tahun</span>
+              </div>
+              <div class="modal-meta-item">
+                <span id="detail-durasi"></span>
+                <span data-lgn="modal_durasi">Durasi</span>
+              </div>
+              <div class="modal-meta-item">
+                <span id="detail-peran"></span>
+                <span data-lgn="modal_peran">Peran</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p id="modal-desc"></p>
   </div>
+  <!-- Modal for Certificate -->
   <div id="cert-modal">
     <button id="cert-modal-close">
       <i class="bx bx-x ikon"></i>
@@ -275,13 +314,20 @@
       <div class="slider-wrapper">
         <div class="service-content" id="track-projek">
           <!-- Bad Habit Tracker -->
-          <div class="row">
+          <div class="row"
+          data-images='["img/projek/Bad Habit Tracker/Bad_habit.png", "img/projek/Bad Habit Tracker/Bad_habit_insert.png", "img/projek/Bad Habit Tracker/Bad_habit_category.png", "img/projek/Bad Habit Tracker/Bad_habit_history.png"]'
+          data-chips='["HTML", "CSS", "JavaScript"]'
+          data-stack='{"Frontend":["HTML","CSS","JavaScript"]}'
+          data-tahun="2026"
+          data-durasi-lgn="projects_bad_habit_durasi"
+          data-peran-lgn="projects_bad_habit_peran"
+          data-alasan-lgn="projects_bad_habit_alasan"
+          >
             <i class="bx bx-hourglass"></i>
             <h3>Bad Habit Tracker</h3>
             <img
-              src="img/projek/Bad Habit Tracker/Bad_habit_insert.png"
+              src="img/projek/Bad Habit Tracker/Bad_habit.png"
               alt="Bad Habit Tracker"
-              data-images='["img/projek/Bad Habit Tracker/Bad_habit_insert.png", "img/projek/Bad Habit Tracker/Bad_habit_category.png", "img/projek/Bad Habit Tracker/Bad_habit_history.png"]'
             />
             <p data-lgn="projects_bad_habit_desc">
               Aplikasi pelacak kebiasaan berbasis web yang membantu pengguna
@@ -292,15 +338,22 @@
           </div>
 
           <!-- U-Taps -->
-          <div class="row">
+          <div class="row"
+          data-images='["img/projek/Utaps/Utaps.png", "img/projek/Utaps/Utaps_beranda.png", "img/projek/Utaps/Utaps_login.png", "img/projek/Utaps/Utaps_regis.png",
+              "img/projek/Utaps/Utaps_katalog.png", "img/projek/Utaps/Utaps_detail.png", "img/projek/Utaps/Utaps_about.png",
+              "img/projek/Utaps/Utaps_promo.png","img/projek/Utaps/Utaps_wishlist.png","img/projek/Utaps/Utaps_keranjang.png"]'
+          data-chips='["HTML", "CSS", "JavaScript"]'
+          data-stack='{"Frontend":["HTML","CSS","JavaScript"]}'
+          data-tahun="2025-2026"
+          data-durasi-lgn="projects_utaps_durasi"
+          data-peran-lgn="projects_utaps_peran"
+          data-alasan-lgn="projects_utaps_alasan"
+          >
             <i class="bx bx-sneaker"></i>
             <h3>U-Taps</h3>
             <img
-              src="img/projek/Utaps/Utaps_beranda.png"
+              src="img/projek/Utaps/Utaps.png"
               alt="U-Taps"
-              data-images='["img/projek/Utaps/Utaps_beranda.png", "img/projek/Utaps/Utaps_login.png", "img/projek/Utaps/Utaps_regis.png",
-              "img/projek/Utaps/Utaps_katalog.png", "img/projek/Utaps/Utaps_detail.png", "img/projek/Utaps/Utaps_about.png",
-              "img/projek/Utaps/Utaps_promo.png","img/projek/Utaps/Utaps_wishlist.png","img/projek/Utaps/Utaps_keranjang.png"]'
             />
             <p data-lgn="projects_utaps_desc">
               Aplikasi e-commerce sepatu berbasis web yang menghadirkan
@@ -310,18 +363,25 @@
           </div>
 
           <!-- Lelangku -->
-          <div class="row">
-            <i class="bx bx-gavel"></i>
-            <h3>Lelangku</h3>
-            <img
-              src="img/projek/Lelangku/Lelangku_dashboard_masyarakat.png"
-              alt="Lelangku"
-              data-images='["img/projek/Lelangku/Lelangku_dashboard_masyarakat.png", "img/projek/Lelangku/Lelangku_login_masyarakat.png", "img/projek/Lelangku/Lelangku_register_masyarakat.png",
+          <div class="row"
+          data-images='["img/projek/Lelangku/Lelangku.png", "img/projek/Lelangku/Lelangku_dashboard_masyarakat.png", "img/projek/Lelangku/Lelangku_login_masyarakat.png", "img/projek/Lelangku/Lelangku_register_masyarakat.png",
             "img/projek/Lelangku/Lelangku_transaksi_masyarakat.png", "img/projek/Lelangku/Lelangku_detail_barang.png", "img/projek/Lelangku/Lelangku_history_masyarakat.png", 
             "img/projek/Lelangku/Lelangku_detail_history.png", "img/projek/Lelangku/Lelangku_about.png", "img/projek/Lelangku/Lelangku_profil.png", "img/projek/Lelangku/Lelangku_login_petugas.png", 
             "img/projek/Lelangku/Lelangku_dashboard_petugas.png", "img/projek/Lelangku/Lelangku_data_petugas.png", "img/projek/Lelangku/Lelangku_insert_petugas.png", "img/projek/Lelangku/Lelangku_update_petugas.png", 
             "img/projek/Lelangku/Lelangku_data_masyarakat.png", "img/projek/Lelangku/Lelangku_data_barang.png", "img/projek/Lelangku/Lelangku_laporan_admin.png", "img/projek/Lelangku/Lelangku_transaksi_petugas.png", 
             "img/projek/Lelangku/Lelangku_history_petugas.png", "img/projek/Lelangku/Lelangku_laporan_petugas.png"]'
+          data-chips='["HTML", "CSS", "JavaScript"]'
+          data-stack='{"Frontend":["HTML","CSS","JavaScript"]}'
+          data-tahun="2025"
+          data-durasi-lgn="projects_lelangku_durasi"
+          data-peran-lgn="projects_lelangku_peran"
+          data-alasan-lgn="projects_lelangku_alasan"
+          >
+            <i class="bx bx-gavel"></i>
+            <h3>Lelangku</h3>
+            <img
+              src="img/projek/Lelangku/Lelangku.png"
+              alt="Lelangku"
             />
             <p data-lgn="projects_lelangku_desc">
               Aplikasi lelang berbasis web dengan tampilan sederhana dan
@@ -331,16 +391,23 @@
           </div>
 
           <!-- Pembayaran SPP -->
-          <div class="row">
-            <i class="bx bx-credit-card"></i>
-            <h3>Pembayaran SPP</h3>
-            <img
-              src="img/projek/SPP RA Darul Ikhlas/SPP_dashboard_op.png"
-              alt="Pembayaran SPP"
-              data-images='["img/projek/SPP RA Darul Ikhlas/SPP_dashboard_op.png", "img/projek/SPP RA Darul Ikhlas/SPP_login.png", "img/projek/SPP RA Darul Ikhlas/SPP_data_spp_siswa.png", "img/projek/SPP RA Darul Ikhlas/SPP_transaksi_spp.png",
+          <div class="row"
+          data-images='["img/projek/SPP RA Darul Ikhlas/SPP.png", "img/projek/SPP RA Darul Ikhlas/SPP_dashboard_op.png", "img/projek/SPP RA Darul Ikhlas/SPP_login.png", "img/projek/SPP RA Darul Ikhlas/SPP_data_spp_siswa.png", "img/projek/SPP RA Darul Ikhlas/SPP_transaksi_spp.png",
               "img/projek/SPP RA Darul Ikhlas/SPP_history_transaksi.png", "img/projek/SPP RA Darul Ikhlas/SPP_data_spp_perbulan.png", "img/projek/SPP RA Darul Ikhlas/SPP_data_spp_bulan_tertentu.png", "img/projek/SPP RA Darul Ikhlas/SPP_dashboard_ks.png",
               "img/projek/SPP RA Darul Ikhlas/SPP_update_data_diri.png", "img/projek/SPP RA Darul Ikhlas/SPP_harga_spp.png", "img/projek/SPP RA Darul Ikhlas/SPP_data_user.png", "img/projek/SPP RA Darul Ikhlas/SPP_insert_user.png",
               "img/projek/SPP RA Darul Ikhlas/SPP_update_user.png"]'
+          data-chips='["HTML", "CSS", "JavaScript"]'
+          data-stack='{"Frontend":["HTML","CSS","JavaScript"]}'
+          data-tahun="2025"
+          data-durasi-lgn="projects_spp_durasi"
+          data-peran-lgn="projects_spp_peran"
+          data-alasan-lgn="projects_spp_alasan"
+          >
+            <i class="bx bx-credit-card"></i>
+            <h3>Pembayaran SPP</h3>
+            <img
+              src="img/projek/SPP RA Darul Ikhlas/SPP.png"
+              alt="Pembayaran SPP"
             />
             <p data-lgn="projects_spp_desc">
               Aplikasi pembayaran SPP berbasis web untuk membantu proses

@@ -137,12 +137,28 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "Sertifikat",
     projects_title: "Projek",
+    projects_bad_habit_durasi: "1 hari",
+    projects_bad_habit_peran: "Solo developer",
+    projects_bad_habit_alasan:
+      "Proyek ini dibuat untuk memenuhi tugas akhir dari RevoU CodingCamp, yaitu membuat mini-project to-do list. Namun saya ingin melangkah lebih jauh dari sekadar to-do list biasa — saya tertarik pada bagaimana kebiasaan buruk bisa menguras waktu tanpa kita sadari. Maka dari itu saya mengubah konsepnya menjadi pelacak kebiasaan yang membantu pengguna memantau dan menganalisis waktu yang terbuang secara visual.",
     projects_bad_habit_desc:
       "Aplikasi pelacak kebiasaan berbasis web yang membantu pengguna memantau dan menganalisis waktu yang terbuang melalui tampilan responsif, visualisasi data interaktif, serta fitur yang mendukung peningkatan produktivitas.",
+    projects_utaps_durasi: "3 bulan",
+    projects_utaps_peran: "Frontend Developer – Customer Side",
+    projects_utaps_alasan:
+      "Proyek ini dikerjakan sebagai bagian dari program PKL di PT Goldstep Teknologi Indonesia, dengan tujuan membangun web app simulasi e-commerce sepatu bernama UTAPS. Saya bergabung dalam tim frontend dan bertanggung jawab penuh pada sisi customer — bukan CMS. Bersama satu rekan, kami membagi halaman secara merata, dan bagian saya mencakup halaman login, registrasi, beranda, about, katalog produk, detail produk, halaman promo, wishlist, dan keranjang belanja. Pengalaman ini mengajarkan saya bagaimana berkolaborasi dalam tim kecil, mengatur pembagian tugas agar tidak bentrok, sekaligus memastikan tampilan dan alur pengguna terasa konsisten dari satu halaman ke halaman lain.",
     projects_utaps_desc:
       "Aplikasi e-commerce sepatu berbasis web yang menghadirkan pengalaman belanja modern dengan tampilan responsif, navigasi yang mudah, dan fitur yang mendukung kenyamanan pengguna.",
+    projects_lelangku_durasi: "4 hari",
+    projects_lelangku_peran: "Solo developer",
+    projects_lelangku_alasan:
+      "Proyek ini dibuat untuk memenuhi tugas Uji Kompetensi di sekolah, dengan tema membangun web app lelang barang. Saya mengambil referensi visual dan fungsional dari platform nyata seperti Lelang Indonesia, lalu mengadaptasinya menjadi versi saya sendiri. Dalam waktu 4 hari, saya merancang dan membangun seluruh aplikasi sendirian — mulai dari alur penawaran, manajemen barang, hingga tampilan yang intuitif bagi pengguna. Proyek ini menjadi tantangan tersendiri karena harus menyeimbangkan kecepatan pengerjaan dengan kualitas hasil di bawah tekanan waktu ujian.",
     projects_lelangku_desc:
       "Aplikasi lelang berbasis web dengan tampilan sederhana dan interaktif untuk memudahkan pengguna dalam melakukan penawaran barang yang sedang di lelang.",
+    projects_spp_durasi: "3 bulan",
+    projects_spp_peran: "Backend Developer – Modul SPP",
+    projects_spp_alasan:
+      "Proyek ini dikerjakan sebagai tugas PKK di sekolah, dengan tujuan membangun web app administrasi untuk RA Darul Ikhlas. Kami mengerjakan proyek ini bertiga — saya dan dua rekan — dengan membagi sistem menjadi tiga modul utama: pendaftaran siswa baru, pencatatan tabungan harian, dan pencatatan pembayaran SPP. Saya bertanggung jawab penuh pada modul SPP, mencakup logika pencatatan pembayaran bulanan, validasi data, dan pelaporan status pembayaran per siswa. Ketiga modul ini dikerjakan secara paralel lalu disatukan menjadi satu sistem yang terintegrasi. Proyek ini mengajarkan saya pentingnya komunikasi antar anggota tim agar struktur database dan alur data antar modul tetap konsisten saat digabungkan.",
     projects_spp_desc:
       "Aplikasi pembayaran SPP berbasis web untuk membantu proses pencatatan dan pengelolaan pembayaran siswa pada lembaga pendidikan RA Darul Ikhlas secara lebih efisien.",
     cta_text: "Mari ciptakan produk yang bermanfaat bersama!",
@@ -188,12 +204,28 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "Certificates",
     projects_title: "Projects",
+    projects_bad_habit_durasi: "1 day",
+    projects_bad_habit_peran: "Solo developer",
+    projects_bad_habit_alasan:
+      "This project was created to fulfill a final assignment from RevoU CodingCamp — building a mini to-do list project. However, I wanted to go beyond a simple to-do list. I was curious about how bad habits silently drain our time without us noticing. So I reframed the concept into a habit tracker that helps users monitor and visually analyze the time lost to unproductive habits.",
     projects_bad_habit_desc:
       "A web-based habit tracking application that helps users monitor and analyze time spent on unproductive activities through a responsive interface, interactive data visualizations, and features designed to encourage better productivity.",
+    projects_utaps_durasi: "3 months",
+    projects_utaps_peran: "Frontend Developer – Customer Side",
+    projects_utaps_alasan:
+      "This project was developed during my internship at PT Goldstep Teknologi Indonesia, as part of building a shoe e-commerce web app simulation called UTAPS. I was part of the frontend team and took full ownership of the customer-facing side — separate from the CMS. Working alongside one teammate, we divided the pages between us. My responsibilities covered the login, registration, home, about, product catalog, product detail, promo, wishlist, and shopping cart pages. The experience taught me how to collaborate effectively in a small team, coordinate task division to avoid conflicts, and maintain a consistent look and user flow across multiple pages.",
     projects_utaps_desc:
       "A web-based shoe e-commerce app that delivers a modern shopping experience with a responsive design, easy navigation, and features built for user comfort.",
+    projects_lelangku_durasi: "4 days",
+    projects_lelangku_peran: "Solo developer",
+    projects_lelangku_alasan:
+      "This project was built to fulfill a Competency Test assignment at school, with the theme of creating an online auction web app. I took visual and functional references from real platforms like Lelang Indonesia, then adapted them into my own version. Within just 4 days, I designed and built the entire application on my own — from the bidding flow and item management to an intuitive user interface. The project was a personal challenge in balancing speed and quality under the pressure of an exam deadline.",
     projects_lelangku_desc:
       "A web-based auction app with a simple and interactive interface that makes it easy for users to place bids on items up for auction.",
+    projects_spp_durasi: "3 months",
+    projects_spp_peran: "Backend Developer – SPP Module",
+    projects_spp_alasan:
+      "This project was developed as a PKK assignment at school, aimed at building an administration web app for RA Darul Ikhlas, a kindergarten. I worked in a team of three, dividing the system into three main modules: new student registration, daily savings tracking, and monthly tuition fee recording. I was fully responsible for the SPP (tuition) module, covering payment recording logic, data validation, and per-student payment status reporting. Each module was built in parallel and later merged into one integrated system. This project taught me the importance of clear communication within a team — especially when aligning database structures and data flow across independently developed modules.",
     projects_spp_desc:
       "A web-based SPP payment app designed to help streamline the recording and management of student payments at the RA Darul Ikhlas educational institution.",
     cta_text: "Let's create something meaningful together!",
@@ -239,12 +271,28 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "証書",
     projects_title: "プロジェクト",
+    projects_bad_habit_durasi: "1日",
+    projects_bad_habit_peran: "個人開発",
+    projects_bad_habit_alasan:
+      "このプロジェクトは、RevoU CodingCampの最終課題として作成しました。課題内容はミニToDoリストの制作でしたが、単純なToDoリストにとどまらず、もう一歩踏み込みたいと思いました。悪い習慣が気づかないうちに時間を奪っていくことに興味を持ち、コンセプトを習慣トラッカーに転換しました。このアプリは、無駄に費やした時間を視覚的に把握・分析できるツールです。",
     projects_bad_habit_desc:
       "非生産的な活動に費やした時間を記録・分析できるWebベースの習慣管理アプリです。レスポンシブなインターフェース、インタラクティブなデータ可視化機能、生産性向上をサポートする機能を備えています。",
+    projects_utaps_durasi: "3ヶ月",
+    projects_utaps_peran: "フロントエンド開発者 – カスタマーサイド担当",
+    projects_utaps_alasan:
+      "このプロジェクトは、PT Goldstep Teknologi IndonesiaでのPKL（インターンシップ）期間中に、UTAPSという靴のECサイトシミュレーションアプリを構築する一環として取り組みました。私はフロントエンドチームの一員として、CMSではなくカスタマー向けページを専任で担当しました。チームメイトと二人でページを分担し、私が担当したのはログイン、会員登録、トップページ、会社紹介、商品カタログ、商品詳細、プロモーション、ウィッシュリスト、ショッピングカートの各ページです。この経験を通じて、小規模チームでの効果的な協力体制の築き方、作業分担の調整方法、そして複数ページにわたる一貫したデザインとユーザーフローの維持について実践的に学びました。",
     projects_utaps_desc:
       "レスポンシブデザイン、使いやすいナビゲーション、ユーザーの快適さを重視した機能を備えた、モダンなショッピング体験を提供するWebベースの靴ECアプリです。",
+    projects_lelangku_durasi: "4日間",
+    projects_lelangku_peran: "個人開発",
+    projects_lelangku_alasan:
+      "このプロジェクトは、学校の技能検定課題として、オークションWebアプリを制作するために取り組みました。Lelang Indonesiaなどの実在するプラットフォームをビジュアルと機能面の参考にしながら、自分なりのアレンジを加えて制作しました。わずか4日間で、入札の流れ、商品管理、直感的なUIまで、アプリ全体を一人で設計・開発しました。試験という時間的プレッシャーの中で、スピードと完成度のバランスを取ることが最大の挑戦でした。",
     projects_lelangku_desc:
       "シンプルでインタラクティブな画面で、オークション出品中の商品への入札を簡単に行えるWebベースのオークションアプリです。",
+    projects_spp_durasi: "3ヶ月",
+    projects_spp_peran: "バックエンド開発者 – SPPモジュール担当",
+    projects_spp_alasan:
+      "このプロジェクトは、学校のPKK課題として、RA Darul Ikhlas（幼稚園）向けの管理Webアプリを構築するために取り組みました。私を含む3人のチームで開発を進め、システムを3つの主要モジュールに分担しました。担当は新入生登録、毎日の貯蓄記録、そして月謝（SPP）の支払い記録です。私はSPPモジュールを全面的に担当し、月次支払いの記録ロジック、データバリデーション、および生徒ごとの支払い状況レポート機能を実装しました。各モジュールは並行して開発され、最終的に一つの統合システムとして結合されました。このプロジェクトを通じて、独立して開発されたモジュール間でデータベース構造とデータフローを一致させるための、チーム内コミュニケーションの重要性を実感しました。",
     projects_spp_desc:
       "RA Darul Ikhlas教育機関における生徒の支払い記録と管理を効率化するために設計されたWebベースのSPP支払いアプリです。",
     cta_text: "一緒に意味のあるものを作りましょう！",
@@ -356,6 +404,15 @@ function initImageModal() {
   const modalDesc = document.getElementById("modal-desc");
   const modalPrev = document.getElementById("modal-prev");
   const modalNext = document.getElementById("modal-next");
+  const modalTitle = document.getElementById("modal-title");
+  const modalChips = document.getElementById("modal-chips");
+  const btnMore = document.getElementById("btn-selengkapnya");
+  const detailPanel = document.getElementById("modal-detail");
+  const detailAlasan = document.getElementById("detail-alasan");
+  const detailStack = document.getElementById("detail-stack");
+  const detailTahun = document.getElementById("detail-tahun");
+  const detailDurasi = document.getElementById("detail-durasi");
+  const detailPeran = document.getElementById("detail-peran");
 
   if (
     !modal ||
@@ -369,7 +426,6 @@ function initImageModal() {
 
   let currentImages = [];
   let currentIndex = 0;
-
   function showImage(index) {
     currentIndex = index;
     modalImg.src = currentImages[currentIndex];
@@ -385,46 +441,91 @@ function initImageModal() {
         : "";
     }
   }
+  function openModal(card) {
+    detailPanel.classList.remove("expanded");
+    btnMore.classList.remove("expanded");
+    btnMore
+      .querySelector("span")
+      .setAttribute("data-lgn", "modal_selengkapnya");
+    btnMore.querySelector("i").className = "bx bx-chevron-down";
+    applyLang();
+    const raw = card.dataset.images;
+    currentImages = raw ? JSON.parse(raw) : [card.querySelector("img").src];
+    showImage(0);
+    modalDesc.textContent = card.querySelector("p").textContent;
+    modalTitle.textContent = card.dataset.title;
+    const chips = card.dataset.chips ? JSON.parse(card.dataset.chips) : [];
+    modalChips.innerHTML = chips
+      .map((c) => `<span class="chip">${c}</span>`)
+      .join("");
+    const alasanKey = card.dataset.alasanLgn;
+    detailAlasan.setAttribute("data-lgn", alasanKey);
+    applyLang();
+    const stack = card.dataset.stack ? JSON.parse(card.dataset.stack) : {};
+    detailStack.innerHTML = Object.entries(stack)
+      .map(
+        ([kat, items]) => `
+      <div class="stack-group">
+        <p class="stack-group-label">${kat}</p>
+        <div class="stack-chips">
+          ${items.map((i) => `<span class="stack-chip">${i}</span>`).join("")}
+        </div>
+      </div>
+    `,
+      )
+      .join("");
+    detailTahun.textContent = card.dataset.tahun;
 
+    const durasiKey = card.dataset.durasiLgn;
+    const peranKey = card.dataset.peranLgn;
+    detailDurasi.setAttribute("data-lgn", durasiKey);
+    detailPeran.setAttribute("data-lgn", peranKey);
+    applyLang();
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
   document.querySelectorAll(".row img").forEach((img) => {
     img.addEventListener("click", () => {
-      const raw = img.getAttribute("data-images");
-      currentImages = raw ? JSON.parse(raw) : [img.src];
-      currentIndex = 0;
-
-      modalDesc.textContent = img
-        .closest(".row")
-        .querySelector("p").textContent;
-      modal.style.display = "flex";
-      showImage(0);
+      openModal(img.closest(".row"));
     });
   });
-
   modalPrev.addEventListener("click", (e) => {
     e.stopPropagation();
-    const newIndex =
-      (currentIndex - 1 + currentImages.length) % currentImages.length;
-    showImage(newIndex);
+    showImage((currentIndex - 1 + currentImages.length) % currentImages.length);
   });
-
   modalNext.addEventListener("click", (e) => {
     e.stopPropagation();
-    const newIndex = (currentIndex + 1) % currentImages.length;
-    showImage(newIndex);
+    showImage((currentIndex + 1) % currentImages.length);
   });
-
-  modalClose.addEventListener("click", function (e) {
-    e.stopPropagation();
+  btnMore.addEventListener("click", () => {
+    const isExpanded = detailPanel.classList.toggle("expanded");
+    btnMore.classList.toggle("expanded", isExpanded);
+    const span = btnMore.querySelector("span");
+    span.setAttribute(
+      "data-lgn",
+      isExpanded ? "modal_lebih_sedikit" : "modal_selengkapnya",
+    );
+    btnMore.querySelector("i").className = isExpanded
+      ? "bx bx-chevron-up"
+      : "bx bx-chevron-down";
+    applyLang();
+  });
+  function closeModal() {
     modal.style.display = "none";
+    document.body.style.overflow = "";
+  }
+  modalClose.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeModal();
+  });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
   });
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
   });
 }
-
 // Menu Toggle
 function initMenuToggle() {
   let menu = document.querySelector("#menu-icon");
