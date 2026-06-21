@@ -408,7 +408,8 @@ section {
   gap: 6px;
   margin-bottom: 12px;
 }
-#modal-chips .chip {
+#modal-chips .chip,
+.row-chips .chip {
   font-size: 0.75rem;
   padding: 3px 10px;
   border-radius: 8px;
@@ -566,6 +567,12 @@ section {
   border-radius: 5px;
   margin-bottom: 20px;
   cursor: pointer;
+}
+.row-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
 #img-modal {
@@ -944,16 +951,16 @@ form .send-btn:hover {
     padding: 25px 15px;
   }
   .slider-arrows-modal {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 12px;
   }
   .slider-arrows-modal button {
-    position: static;
+    position: absolute;
   }
   .slider-arrows-modal #modal-prev,
   .slider-arrows-modal #modal-next {
-    position: static;
+    position: absolute;
   }
   .slider-arrows-modal {
     flex-direction: column;
@@ -964,17 +971,17 @@ form .send-btn:hover {
     justify-content: center;
   }
   #modal-img {
-    order: 1;
+    order: unset;
     width: 100%;
   }
 
   #modal-prev {
-    order: 2;
+    order: unset;
     position: static;
   }
 
   #modal-next {
-    order: 3;
+    order: unset;
     position: static;
   }
 }

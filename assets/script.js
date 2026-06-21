@@ -115,6 +115,14 @@ const translations = {
     nav_resume: "Pengalaman",
     nav_certificate: "Sertifikat",
     nav_contact: "Kontak",
+    modal_selengkapnya: "Selengkapnya",
+    modal_lebih_sedikit: "Lebih sedikit",
+    modal_latar_belakang: "Latar belakang",
+    modal_tech_stack: "Tech stack",
+    modal_info_projek: "Info proyek",
+    modal_tahun: "Tahun",
+    modal_durasi: "Durasi",
+    modal_peran: "Peran",
     home_greet: "Halo, Saya",
     home_name: "Muhammad Akmal",
     home_desc:
@@ -182,6 +190,14 @@ const translations = {
     nav_certificate: "Certificates",
     nav_resume: "Experience",
     nav_contact: "Contact",
+    modal_selengkapnya: "See more",
+    modal_lebih_sedikit: "See less",
+    modal_latar_belakang: "Background",
+    modal_tech_stack: "Tech stack",
+    modal_info_projek: "Project info",
+    modal_tahun: "Year",
+    modal_durasi: "Duration",
+    modal_peran: "Role",
     home_greet: "Hi, I'm",
     home_name: "Muhammad Akmal",
     home_desc:
@@ -249,6 +265,14 @@ const translations = {
     nav_projects: "プロジェクト",
     nav_resume: "経験",
     nav_contact: "お問い合わせ",
+    modal_selengkapnya: "もっと見る",
+    modal_lebih_sedikit: "閉じる",
+    modal_latar_belakang: "背景",
+    modal_tech_stack: "技術スタック",
+    modal_info_projek: "プロジェクト情報",
+    modal_tahun: "年",
+    modal_durasi: "期間",
+    modal_peran: "役割",
     home_greet: "こんにちは、私は",
     home_name: "Muhammad Akmal",
     home_desc:
@@ -315,6 +339,7 @@ const cvFiles = {
   en: "img/CV M Akmal (EN).pdf",
   ja: "img/CV M Akmal (JP).pdf",
 };
+let currentLang = "id";
 
 // Language Toggle
 function applyLang(lang) {
@@ -347,6 +372,7 @@ function applyLang(lang) {
 function setLang(lang) {
   localStorage.setItem("lang", lang);
   applyLang(lang);
+  currentLang = lang;
 
   document.querySelectorAll(".lang-switcher button").forEach((btn) => {
     btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
@@ -398,34 +424,27 @@ function initCertModal() {
 
 // Image Modal
 function initImageModal() {
-  const modal = document.getElementById("img-modal");
-  const modalClose = document.getElementById("modal-close");
-  const modalImg = document.getElementById("modal-img");
-  const modalDesc = document.getElementById("modal-desc");
-  const modalPrev = document.getElementById("modal-prev");
-  const modalNext = document.getElementById("modal-next");
-  const modalTitle = document.getElementById("modal-title");
-  const modalChips = document.getElementById("modal-chips");
-  const btnMore = document.getElementById("btn-selengkapnya");
-  const detailPanel = document.getElementById("modal-detail");
+  const modal        = document.getElementById("img-modal");
+  const modalClose   = document.getElementById("modal-close");
+  const modalImg     = document.getElementById("modal-img");
+  const modalDesc    = document.getElementById("modal-desc");
+  const modalPrev    = document.getElementById("modal-prev");
+  const modalNext    = document.getElementById("modal-next");
+  const modalTitle   = document.getElementById("modal-title");
+  const modalChips   = document.getElementById("modal-chips");
+  const btnMore      = document.getElementById("btn-selengkapnya");
+  const detailPanel  = document.getElementById("modal-detail");
   const detailAlasan = document.getElementById("detail-alasan");
-  const detailStack = document.getElementById("detail-stack");
-  const detailTahun = document.getElementById("detail-tahun");
+  const detailStack  = document.getElementById("detail-stack");
+  const detailTahun  = document.getElementById("detail-tahun");
   const detailDurasi = document.getElementById("detail-durasi");
-  const detailPeran = document.getElementById("detail-peran");
+  const detailPeran  = document.getElementById("detail-peran");
 
-  if (
-    !modal ||
-    !modalClose ||
-    !modalImg ||
-    !modalDesc ||
-    !modalPrev ||
-    !modalNext
-  )
-    return;
+  if (!modal || !modalClose || !modalImg || !modalDesc || !modalPrev || !modalNext) return;
 
   let currentImages = [];
-  let currentIndex = 0;
+  let currentIndex  = 0;
+
   function showImage(index) {
     currentIndex = index;
     modalImg.src = currentImages[currentIndex];
@@ -441,83 +460,86 @@ function initImageModal() {
         : "";
     }
   }
+
   function openModal(card) {
     detailPanel.classList.remove("expanded");
     btnMore.classList.remove("expanded");
-    btnMore
-      .querySelector("span")
-      .setAttribute("data-lgn", "modal_selengkapnya");
+    btnMore.querySelector("span").setAttribute("data-lgn", "modal_selengkapnya");
     btnMore.querySelector("i").className = "bx bx-chevron-down";
-    applyLang();
+
     const raw = card.dataset.images;
     currentImages = raw ? JSON.parse(raw) : [card.querySelector("img").src];
     showImage(0);
-    modalDesc.textContent = card.querySelector("p").textContent;
+
+    modalDesc.textContent  = card.querySelector("p").textContent;
     modalTitle.textContent = card.dataset.title;
+
     const chips = card.dataset.chips ? JSON.parse(card.dataset.chips) : [];
     modalChips.innerHTML = chips
       .map((c) => `<span class="chip">${c}</span>`)
       .join("");
-    const alasanKey = card.dataset.alasanLgn;
-    detailAlasan.setAttribute("data-lgn", alasanKey);
-    applyLang();
+
+    detailAlasan.setAttribute("data-lgn", card.dataset.alasanLgn);
+    detailDurasi.setAttribute("data-lgn", card.dataset.durasiLgn);
+    detailPeran.setAttribute("data-lgn",  card.dataset.peranLgn);
+
+    detailTahun.textContent = card.dataset.tahun;
+
     const stack = card.dataset.stack ? JSON.parse(card.dataset.stack) : {};
-    detailStack.innerHTML = Object.entries(stack)
-      .map(
-        ([kat, items]) => `
+    detailStack.innerHTML = Object.entries(stack).map(([kat, items]) => `
       <div class="stack-group">
         <p class="stack-group-label">${kat}</p>
         <div class="stack-chips">
           ${items.map((i) => `<span class="stack-chip">${i}</span>`).join("")}
         </div>
       </div>
-    `,
-      )
-      .join("");
-    detailTahun.textContent = card.dataset.tahun;
+    `).join("");
 
-    const durasiKey = card.dataset.durasiLgn;
-    const peranKey = card.dataset.peranLgn;
-    detailDurasi.setAttribute("data-lgn", durasiKey);
-    detailPeran.setAttribute("data-lgn", peranKey);
-    applyLang();
+    applyLang(currentLang);
+
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
   }
+
   document.querySelectorAll(".row img").forEach((img) => {
     img.addEventListener("click", () => {
       openModal(img.closest(".row"));
     });
   });
+
   modalPrev.addEventListener("click", (e) => {
     e.stopPropagation();
     showImage((currentIndex - 1 + currentImages.length) % currentImages.length);
   });
+
   modalNext.addEventListener("click", (e) => {
     e.stopPropagation();
     showImage((currentIndex + 1) % currentImages.length);
   });
+
   btnMore.addEventListener("click", () => {
     const isExpanded = detailPanel.classList.toggle("expanded");
     btnMore.classList.toggle("expanded", isExpanded);
-    const span = btnMore.querySelector("span");
-    span.setAttribute(
+    btnMore.querySelector("span").setAttribute(
       "data-lgn",
-      isExpanded ? "modal_lebih_sedikit" : "modal_selengkapnya",
+      isExpanded ? "modal_lebih_sedikit" : "modal_selengkapnya"
     );
     btnMore.querySelector("i").className = isExpanded
       ? "bx bx-chevron-up"
       : "bx bx-chevron-down";
-    applyLang();
+    applyLang(currentLang);
   });
+
   function closeModal() {
     modal.style.display = "none";
     document.body.style.overflow = "";
   }
+
   modalClose.addEventListener("click", (e) => {
     e.stopPropagation();
     closeModal();
   });
+
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
   });
@@ -525,7 +547,20 @@ function initImageModal() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
+
+  function initCardChips() {
+    document.querySelectorAll(".row").forEach((card) => {
+      const chips = card.dataset.chips ? JSON.parse(card.dataset.chips) : [];
+      const container = card.querySelector(".row-chips");
+      if (!container) return;
+      container.innerHTML = chips
+        .map((c) => `<span class="chip">${c}</span>`)
+        .join("");
+    });
+  }
+  initCardChips();
 }
+
 // Menu Toggle
 function initMenuToggle() {
   let menu = document.querySelector("#menu-icon");
