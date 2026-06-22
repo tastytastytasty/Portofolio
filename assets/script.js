@@ -152,9 +152,9 @@ const translations = {
     projects_bad_habit_desc:
       "Aplikasi pelacak kebiasaan berbasis web yang membantu pengguna memantau dan menganalisis waktu yang terbuang melalui tampilan responsif, visualisasi data interaktif, serta fitur yang mendukung peningkatan produktivitas.",
     projects_utaps_durasi: "3 bulan",
-    projects_utaps_peran: "Frontend Developer – Customer Side",
+    projects_utaps_peran: "Full-stack Developer – Customer Side",
     projects_utaps_alasan:
-      "Proyek ini dikerjakan sebagai bagian dari program PKL di PT Goldstep Teknologi Indonesia, dengan tujuan membangun web app simulasi e-commerce sepatu bernama UTAPS. Saya bergabung dalam tim frontend dan bertanggung jawab penuh pada sisi customer — bukan CMS. Bersama satu rekan, kami membagi halaman secara merata, dan bagian saya mencakup halaman login, registrasi, beranda, about, katalog produk, detail produk, halaman promo, wishlist, dan keranjang belanja. Pengalaman ini mengajarkan saya bagaimana berkolaborasi dalam tim kecil, mengatur pembagian tugas agar tidak bentrok, sekaligus memastikan tampilan dan alur pengguna terasa konsisten dari satu halaman ke halaman lain.",
+      "Proyek ini dikerjakan sebagai bagian dari program PKL di PT Goldstep Teknologi Indonesia, dengan tujuan membangun web app simulasi e-commerce sepatu bernama UTAPS. Saya bergabung dalam tim dan bertanggung jawab penuh pada sisi customer — bukan CMS. Bersama satu rekan, kami membagi halaman secara merata, dan bagian saya mencakup halaman login, registrasi, beranda, about, katalog produk, detail produk, halaman promo, wishlist, dan keranjang belanja. Tidak hanya tampilan, saya juga menangani logika backend untuk fitur-fitur yang saya kerjakan — mulai dari sistem autentikasi, manajemen wishlist, keranjang belanja, hingga alur checkout yang terhubung langsung ke database. Pengalaman ini mengajarkan saya bagaimana bekerja secara end-to-end dalam satu fitur, berkolaborasi dalam tim kecil, serta memastikan tampilan dan alur pengguna terasa konsisten dari satu halaman ke halaman lain.",
     projects_utaps_desc:
       "Aplikasi e-commerce sepatu berbasis web yang menghadirkan pengalaman belanja modern dengan tampilan responsif, navigasi yang mudah, dan fitur yang mendukung kenyamanan pengguna.",
     projects_lelangku_durasi: "4 hari",
@@ -164,9 +164,9 @@ const translations = {
     projects_lelangku_desc:
       "Aplikasi lelang berbasis web dengan tampilan sederhana dan interaktif untuk memudahkan pengguna dalam melakukan penawaran barang yang sedang di lelang.",
     projects_spp_durasi: "3 bulan",
-    projects_spp_peran: "Backend Developer – Modul SPP",
+    projects_spp_peran: "Full-stack Developer – Modul SPP",
     projects_spp_alasan:
-      "Proyek ini dikerjakan sebagai tugas PKK di sekolah, dengan tujuan membangun web app administrasi untuk RA Darul Ikhlas. Kami mengerjakan proyek ini bertiga — saya dan dua rekan — dengan membagi sistem menjadi tiga modul utama: pendaftaran siswa baru, pencatatan tabungan harian, dan pencatatan pembayaran SPP. Saya bertanggung jawab penuh pada modul SPP, mencakup logika pencatatan pembayaran bulanan, validasi data, dan pelaporan status pembayaran per siswa. Ketiga modul ini dikerjakan secara paralel lalu disatukan menjadi satu sistem yang terintegrasi. Proyek ini mengajarkan saya pentingnya komunikasi antar anggota tim agar struktur database dan alur data antar modul tetap konsisten saat digabungkan.",
+      "Proyek ini dikerjakan sebagai tugas PKK di sekolah, dengan tujuan membangun web app administrasi untuk RA Darul Ikhlas. Kami mengerjakan proyek ini bertiga — saya dan dua rekan — dengan membagi sistem menjadi tiga modul utama: pendaftaran siswa baru, pencatatan tabungan harian, dan pencatatan pembayaran SPP. Saya bertanggung jawab penuh pada modul SPP secara end-to-end — mulai dari mendesain tampilan halaman pembayaran SPP, riwayat transaksi, dan riwayat pembayaran per siswa, hingga logika backend seperti pencatatan pembayaran bulanan, validasi data, dan pelaporan status pembayaran. Ketiga modul ini dikerjakan secara paralel lalu disatukan menjadi satu sistem yang terintegrasi. Proyek ini mengajarkan saya pentingnya komunikasi antar anggota tim agar struktur database dan alur data antar modul tetap konsisten saat digabungkan.",
     projects_spp_desc:
       "Aplikasi pembayaran SPP berbasis web untuk membantu proses pencatatan dan pengelolaan pembayaran siswa pada lembaga pendidikan RA Darul Ikhlas secara lebih efisien.",
     cta_text: "Mari ciptakan produk yang bermanfaat bersama!",
@@ -227,9 +227,9 @@ const translations = {
     projects_bad_habit_desc:
       "A web-based habit tracking application that helps users monitor and analyze time spent on unproductive activities through a responsive interface, interactive data visualizations, and features designed to encourage better productivity.",
     projects_utaps_durasi: "3 months",
-    projects_utaps_peran: "Frontend Developer – Customer Side",
+    projects_utaps_peran: "Full-stack Developer – Customer Side",
     projects_utaps_alasan:
-      "This project was developed during my internship at PT Goldstep Teknologi Indonesia, as part of building a shoe e-commerce web app simulation called UTAPS. I was part of the frontend team and took full ownership of the customer-facing side — separate from the CMS. Working alongside one teammate, we divided the pages between us. My responsibilities covered the login, registration, home, about, product catalog, product detail, promo, wishlist, and shopping cart pages. The experience taught me how to collaborate effectively in a small team, coordinate task division to avoid conflicts, and maintain a consistent look and user flow across multiple pages.",
+      "This project was developed during my internship at PT Goldstep Teknologi Indonesia, as part of building a shoe e-commerce web app simulation called UTAPS. I was part of the team and took full ownership of the customer-facing side — separate from the CMS. Working alongside one teammate, we divided the pages between us. My responsibilities covered the login, registration, home, about, product catalog, product detail, promo, wishlist, and shopping cart pages. Beyond the UI, I also handled the backend logic for every feature I built — including authentication, wishlist management, shopping cart, and the checkout flow connected directly to the database. This experience taught me how to work end-to-end on a feature, collaborate effectively in a small team, and maintain a consistent look and user flow across multiple pages.",
     projects_utaps_desc:
       "A web-based shoe e-commerce app that delivers a modern shopping experience with a responsive design, easy navigation, and features built for user comfort.",
     projects_lelangku_durasi: "4 days",
@@ -239,9 +239,9 @@ const translations = {
     projects_lelangku_desc:
       "A web-based auction app with a simple and interactive interface that makes it easy for users to place bids on items up for auction.",
     projects_spp_durasi: "3 months",
-    projects_spp_peran: "Backend Developer – SPP Module",
+    projects_spp_peran: "Full-stack Developer – SPP Module",
     projects_spp_alasan:
-      "This project was developed as a PKK assignment at school, aimed at building an administration web app for RA Darul Ikhlas, a kindergarten. I worked in a team of three, dividing the system into three main modules: new student registration, daily savings tracking, and monthly tuition fee recording. I was fully responsible for the SPP (tuition) module, covering payment recording logic, data validation, and per-student payment status reporting. Each module was built in parallel and later merged into one integrated system. This project taught me the importance of clear communication within a team — especially when aligning database structures and data flow across independently developed modules.",
+      "This project was developed as a PKK assignment at school, aimed at building an administration web app for RA Darul Ikhlas, a kindergarten. I worked in a team of three, dividing the system into three main modules: new student registration, daily savings tracking, and monthly tuition fee recording. I took full end-to-end ownership of the SPP module — designing the UI for the payment page, transaction history, and per-student payment history, while also handling the backend logic for monthly payment recording, data validation, and payment status reporting. Each module was built in parallel and later merged into one integrated system. This project taught me the importance of clear communication within a team, especially when aligning database structures and data flow across independently developed modules.",
     projects_spp_desc:
       "A web-based SPP payment app designed to help streamline the recording and management of student payments at the RA Darul Ikhlas educational institution.",
     cta_text: "Let's create something meaningful together!",
@@ -302,9 +302,9 @@ const translations = {
     projects_bad_habit_desc:
       "非生産的な活動に費やした時間を記録・分析できるWebベースの習慣管理アプリです。レスポンシブなインターフェース、インタラクティブなデータ可視化機能、生産性向上をサポートする機能を備えています。",
     projects_utaps_durasi: "3ヶ月",
-    projects_utaps_peran: "フロントエンド開発者 – カスタマーサイド担当",
+    projects_utaps_peran: "フルスタック開発者 – カスタマーサイド担当",
     projects_utaps_alasan:
-      "このプロジェクトは、PT Goldstep Teknologi IndonesiaでのPKL（インターンシップ）期間中に、UTAPSという靴のECサイトシミュレーションアプリを構築する一環として取り組みました。私はフロントエンドチームの一員として、CMSではなくカスタマー向けページを専任で担当しました。チームメイトと二人でページを分担し、私が担当したのはログイン、会員登録、トップページ、会社紹介、商品カタログ、商品詳細、プロモーション、ウィッシュリスト、ショッピングカートの各ページです。この経験を通じて、小規模チームでの効果的な協力体制の築き方、作業分担の調整方法、そして複数ページにわたる一貫したデザインとユーザーフローの維持について実践的に学びました。",
+      "このプロジェクトは、PT Goldstep Teknologi IndonesiaでのPKL（インターンシップ）期間中に、UTAPSという靴のECサイトシミュレーションアプリを構築するために取り組みました。私はチームの一員として、CMSではなくカスタマー向けサイドを専任で担当しました。チームメイトと二人でページを分担し、私が担当したのはログイン、会員登録、トップページ、会社紹介、商品カタログ、商品詳細、プロモーション、ウィッシュリスト、ショッピングカートの各ページです。UIだけでなく、担当した全機能のバックエンドロジックも実装しました。具体的には認証システム、ウィッシュリスト管理、ショッピングカート、そしてデータベースに直接接続したチェックアウトフローまで手がけました。この経験を通じて、一つの機能をエンドツーエンドで完結させる力、小規模チームでの効果的な協力体制、そして複数ページにわたる一貫したデザインとユーザーフローの維持について実践的に学びました。",
     projects_utaps_desc:
       "レスポンシブデザイン、使いやすいナビゲーション、ユーザーの快適さを重視した機能を備えた、モダンなショッピング体験を提供するWebベースの靴ECアプリです。",
     projects_lelangku_durasi: "4日間",
@@ -314,9 +314,9 @@ const translations = {
     projects_lelangku_desc:
       "シンプルでインタラクティブな画面で、オークション出品中の商品への入札を簡単に行えるWebベースのオークションアプリです。",
     projects_spp_durasi: "3ヶ月",
-    projects_spp_peran: "バックエンド開発者 – SPPモジュール担当",
+    projects_spp_peran: "フルスタック開発者 – SPPモジュール担当",
     projects_spp_alasan:
-      "このプロジェクトは、学校のPKK課題として、RA Darul Ikhlas（幼稚園）向けの管理Webアプリを構築するために取り組みました。私を含む3人のチームで開発を進め、システムを3つの主要モジュールに分担しました。担当は新入生登録、毎日の貯蓄記録、そして月謝（SPP）の支払い記録です。私はSPPモジュールを全面的に担当し、月次支払いの記録ロジック、データバリデーション、および生徒ごとの支払い状況レポート機能を実装しました。各モジュールは並行して開発され、最終的に一つの統合システムとして結合されました。このプロジェクトを通じて、独立して開発されたモジュール間でデータベース構造とデータフローを一致させるための、チーム内コミュニケーションの重要性を実感しました。",
+      "このプロジェクトは、学校のPKK課題として、RA Darul Ikhlas（幼稚園）向けの管理Webアプリを構築するために取り組みました。私を含む3人のチームで開発を進め、システムを3つの主要モジュールに分担しました。私はSPPモジュールをエンドツーエンドで全面的に担当しました。フロントエンドでは月謝支払いページ、取引履歴、生徒ごとの支払い履歴画面を設計・実装し、バックエンドでは月次支払いの記録ロジック、データバリデーション、支払い状況レポート機能を構築しました。各モジュールは並行して開発され、最終的に一つの統合システムとして結合されました。このプロジェクトを通じて、独立して開発されたモジュール間でデータベース構造とデータフローを一致させるための、チーム内コミュニケーションの重要性を実感しました。",
     projects_spp_desc:
       "RA Darul Ikhlas教育機関における生徒の支払い記録と管理を効率化するために設計されたWebベースのSPP支払いアプリです。",
     cta_text: "一緒に意味のあるものを作りましょう！",
@@ -335,9 +335,9 @@ const translations = {
   },
 };
 const cvFiles = {
-  id: "img/CV M Akmal (ID).pdf",
-  en: "img/CV M Akmal (EN).pdf",
-  ja: "img/CV M Akmal (JP).pdf",
+  id: "img/CV M Akmal Web Dev.pdf",
+  en: "img/CV M Akmal Web Dev EN.pdf",
+  ja: "img/CV M Akmal Web Dev JP.pdf",
 };
 let currentLang = "id";
 
@@ -424,26 +424,34 @@ function initCertModal() {
 
 // Image Modal
 function initImageModal() {
-  const modal        = document.getElementById("img-modal");
-  const modalClose   = document.getElementById("modal-close");
-  const modalImg     = document.getElementById("modal-img");
-  const modalDesc    = document.getElementById("modal-desc");
-  const modalPrev    = document.getElementById("modal-prev");
-  const modalNext    = document.getElementById("modal-next");
-  const modalTitle   = document.getElementById("modal-title");
-  const modalChips   = document.getElementById("modal-chips");
-  const btnMore      = document.getElementById("btn-selengkapnya");
-  const detailPanel  = document.getElementById("modal-detail");
+  const modal = document.getElementById("img-modal");
+  const modalClose = document.getElementById("modal-close");
+  const modalImg = document.getElementById("modal-img");
+  const modalDesc = document.getElementById("modal-desc");
+  const modalPrev = document.getElementById("modal-prev");
+  const modalNext = document.getElementById("modal-next");
+  const modalTitle = document.getElementById("modal-title");
+  const modalChips = document.getElementById("modal-chips");
+  const btnMore = document.getElementById("btn-selengkapnya");
+  const detailPanel = document.getElementById("modal-detail");
   const detailAlasan = document.getElementById("detail-alasan");
-  const detailStack  = document.getElementById("detail-stack");
-  const detailTahun  = document.getElementById("detail-tahun");
+  const detailStack = document.getElementById("detail-stack");
+  const detailTahun = document.getElementById("detail-tahun");
   const detailDurasi = document.getElementById("detail-durasi");
-  const detailPeran  = document.getElementById("detail-peran");
+  const detailPeran = document.getElementById("detail-peran");
 
-  if (!modal || !modalClose || !modalImg || !modalDesc || !modalPrev || !modalNext) return;
+  if (
+    !modal ||
+    !modalClose ||
+    !modalImg ||
+    !modalDesc ||
+    !modalPrev ||
+    !modalNext
+  )
+    return;
 
   let currentImages = [];
-  let currentIndex  = 0;
+  let currentIndex = 0;
 
   function showImage(index) {
     currentIndex = index;
@@ -464,14 +472,16 @@ function initImageModal() {
   function openModal(card) {
     detailPanel.classList.remove("expanded");
     btnMore.classList.remove("expanded");
-    btnMore.querySelector("span").setAttribute("data-lgn", "modal_selengkapnya");
+    btnMore
+      .querySelector("span")
+      .setAttribute("data-lgn", "modal_selengkapnya");
     btnMore.querySelector("i").className = "bx bx-chevron-down";
 
     const raw = card.dataset.images;
     currentImages = raw ? JSON.parse(raw) : [card.querySelector("img").src];
     showImage(0);
 
-    modalDesc.textContent  = card.querySelector("p").textContent;
+    modalDesc.textContent = card.querySelector("p").textContent;
     modalTitle.textContent = card.dataset.title;
 
     const chips = card.dataset.chips ? JSON.parse(card.dataset.chips) : [];
@@ -481,19 +491,23 @@ function initImageModal() {
 
     detailAlasan.setAttribute("data-lgn", card.dataset.alasanLgn);
     detailDurasi.setAttribute("data-lgn", card.dataset.durasiLgn);
-    detailPeran.setAttribute("data-lgn",  card.dataset.peranLgn);
+    detailPeran.setAttribute("data-lgn", card.dataset.peranLgn);
 
     detailTahun.textContent = card.dataset.tahun;
 
     const stack = card.dataset.stack ? JSON.parse(card.dataset.stack) : {};
-    detailStack.innerHTML = Object.entries(stack).map(([kat, items]) => `
+    detailStack.innerHTML = Object.entries(stack)
+      .map(
+        ([kat, items]) => `
       <div class="stack-group">
         <p class="stack-group-label">${kat}</p>
         <div class="stack-chips">
           ${items.map((i) => `<span class="stack-chip">${i}</span>`).join("")}
         </div>
       </div>
-    `).join("");
+    `,
+      )
+      .join("");
 
     applyLang(currentLang);
 
@@ -520,10 +534,12 @@ function initImageModal() {
   btnMore.addEventListener("click", () => {
     const isExpanded = detailPanel.classList.toggle("expanded");
     btnMore.classList.toggle("expanded", isExpanded);
-    btnMore.querySelector("span").setAttribute(
-      "data-lgn",
-      isExpanded ? "modal_lebih_sedikit" : "modal_selengkapnya"
-    );
+    btnMore
+      .querySelector("span")
+      .setAttribute(
+        "data-lgn",
+        isExpanded ? "modal_lebih_sedikit" : "modal_selengkapnya",
+      );
     btnMore.querySelector("i").className = isExpanded
       ? "bx bx-chevron-up"
       : "bx bx-chevron-down";
