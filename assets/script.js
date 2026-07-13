@@ -145,6 +145,12 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "Sertifikat",
     projects_title: "Projek",
+    projects_hue_hunt_durasi: "1 hari",
+    projects_hue_hunt_peran: "Solo developer",
+    projects_hue_hunt_alasan:
+      "Proyek ini dibuat sebagai proyek mandiri untuk mengasah kemampuan saya dalam pengembangan web menggunakan HTML, CSS, dan JavaScript. Saya ingin membuat sesuatu yang lebih menarik daripada sekadar aplikasi CRUD, sehingga saya memilih mengembangkan sebuah game pencocokan warna yang menguji ketepatan pemain dalam mereplikasi warna menggunakan RGB atau HSL dengan kurung waktu yang telah ditentukan.",
+    projects_hue_hunt_desc:
+      "Aplikasi game pencocokan warna berbasis web yang membantu pengguna melatih akurasi dalam mengenali dan mereproduksi warna melalui kontrol RGB atau HSL, antarmuka responsif, serta sistem penilaian yang interaktif.",
     projects_bad_habit_durasi: "1 hari",
     projects_bad_habit_peran: "Solo developer",
     projects_bad_habit_alasan:
@@ -220,6 +226,12 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "Certificates",
     projects_title: "Projects",
+    projects_hue_hunt_durasi: "1 day",
+    projects_hue_hunt_peran: "Solo Developer",
+    projects_hue_hunt_alasan:
+      "This project was created as a personal project to strengthen my web development skills using HTML, CSS, and JavaScript. Instead of building another CRUD application, I wanted to create something more engaging, so I developed a color-matching game that challenges players to recreate target colors using RGB or HSL within a limited time.",
+    projects_hue_hunt_desc:
+      "A web-based color matching game that helps users improve their color perception and accuracy by recreating target colors using RGB or HSL controls, featuring a responsive interface and an interactive scoring system.",
     projects_bad_habit_durasi: "1 day",
     projects_bad_habit_peran: "Solo developer",
     projects_bad_habit_alasan:
@@ -295,6 +307,12 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "証書",
     projects_title: "プロジェクト",
+    projects_hue_hunt_durasi: "1日",
+    projects_hue_hunt_peran: "個人開発",
+    projects_hue_hunt_alasan:
+      "このプロジェクトは、HTML、CSS、JavaScriptを用いたWeb開発スキルを向上させるための個人制作として開発しました。単なるCRUDアプリケーションではなく、より楽しみながら学べるものを作りたいと考え、制限時間内にRGBまたはHSLを使用して目標の色を再現するカラー マッチングゲームを制作しました。",
+    projects_hue_hunt_desc:
+      "RGBまたはHSLコントロールを使って目標の色を再現し、色の認識力と再現精度を楽しく鍛えられるWebベースのカラー マッチングゲームです。レスポンシブなUIとインタラクティブなスコアリングシステムを備えています。",
     projects_bad_habit_durasi: "1日",
     projects_bad_habit_peran: "個人開発",
     projects_bad_habit_alasan:
