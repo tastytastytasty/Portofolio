@@ -128,6 +128,7 @@ const translations = {
     home_desc:
       "<span>Software Developer</span> yang antusias dalam membangun aplikasi berbasis web yang menarik dan mudah digunakan.",
     home_more: 'Selengkapnya<i class="bx bx-chevron-right ikon"></i>',
+    modal_live_demo: 'Live Demo<i class="bx bx-tabs"></i>',
     about_title: "Tentang Saya",
     about_subtitle: "Saya Software Developer.",
     about_description:
@@ -209,6 +210,7 @@ const translations = {
     home_desc:
       "<span>Software Developer</span> passionate about building attractive and easy-to-use web applications.",
     home_more: 'Learn More<i class="bx bx-chevron-right ikon"></i>',
+    modal_live_demo: 'Live Demo<i class="bx bx-tabs"></i>',
     about_title: "About Me",
     about_subtitle: "I'm a Software Developer.",
     about_description:
@@ -290,6 +292,7 @@ const translations = {
     home_desc:
       "<span>ソフトウェア開発者</span>で、魅力的で使いやすいWebアプリケーションの構築に情熱を持っています。",
     home_more: 'もっと見る<i class="bx bx-chevron-right ikon"></i>',
+    modal_live_demo: 'Live Demo<i class="bx bx-tabs"></i>',
     about_title: "私について",
     about_subtitle: "ソフトウェア開発者です。",
     about_description:
@@ -450,6 +453,7 @@ function initImageModal() {
   const modalNext = document.getElementById("modal-next");
   const modalTitle = document.getElementById("modal-title");
   const modalChips = document.getElementById("modal-chips");
+  const modalDemoBtn = document.getElementById("btn-modal-demo");
   const btnMore = document.getElementById("btn-selengkapnya");
   const detailPanel = document.getElementById("modal-detail");
   const detailAlasan = document.getElementById("detail-alasan");
@@ -507,6 +511,14 @@ function initImageModal() {
       .map((c) => `<span class="chip">${c}</span>`)
       .join("");
 
+    const demoLink = card.dataset.demo;
+    if (demoLink) {
+      modalDemoBtn.href = demoLink;
+      modalDemoBtn.style.display = "inline-flex";
+    } else {
+      modalDemoBtn.style.display = "none";
+    }
+    
     detailAlasan.setAttribute("data-lgn", card.dataset.alasanLgn);
     detailDurasi.setAttribute("data-lgn", card.dataset.durasiLgn);
     detailPeran.setAttribute("data-lgn", card.dataset.peranLgn);

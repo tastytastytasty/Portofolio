@@ -417,6 +417,47 @@ section {
   color: var(--main-color);
   background: none;
 }
+#modal-chips-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 10px;
+}
+
+#modal-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+#btn-modal-demo {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: var(--p-font);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+#btn-modal-demo:hover {
+  background: var(--main-color);
+}
+
+#btn-modal-demo span,
+#btn-modal-demo i {
+  color: inherit;
+}
+
 #btn-selengkapnya {
   width: 100%;
   padding: 8px;
@@ -432,16 +473,20 @@ section {
   gap: 6px;
   transition: background 0.2s;
 }
+
 #btn-selengkapnya:hover {
   background: var(--main-color);
 }
+
 #btn-selengkapnya span,
 #btn-selengkapnya i {
   color: inherit;
 }
+
 #btn-selengkapnya i {
   transition: transform 0.3s;
 }
+
 #btn-selengkapnya.expanded i {
   transform: rotate(180deg);
 }
@@ -809,6 +854,7 @@ form .send-btn {
   letter-spacing: 2px;
   transition: ease all 0.35s;
   margin-top: 5px;
+  border-radius: 0;
 }
 
 form .send-btn:hover {
