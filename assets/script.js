@@ -1,4 +1,4 @@
-// Carousel
+//Carousel Slider
 function initSlider({ trackId, dotsId, prevId, nextId }) {
   const track = document.getElementById(trackId);
   const dotsContainer = document.getElementById(dotsId);
@@ -7,23 +7,28 @@ function initSlider({ trackId, dotsId, prevId, nextId }) {
 
   if (!track || !dotsContainer || !btnPrev || !btnNext) return;
 
-  const cards = track.children;
   let current = 0;
   let visibleCount;
   let total;
   let dots;
-  let currentOffset = 0;
+  let visibleCards = [];
+
+  function getVisibleCards() {
+    return Array.from(track.children).filter(
+      (card) => card.style.display !== "none"
+    );
+  }
 
   function getVisibleCount() {
     return window.innerWidth < 768 ? 1 : 2;
   }
 
   function buildDots() {
+    visibleCards = getVisibleCards();
     dotsContainer.innerHTML = "";
     visibleCount = getVisibleCount();
-    total = Math.ceil(cards.length / visibleCount);
+    total = Math.ceil(visibleCards.length / visibleCount) || 1;
     current = 0;
-    currentOffset = 0;
     track.style.transform = "translateX(0)";
 
     for (let i = 0; i < total; i++) {
@@ -39,20 +44,22 @@ function initSlider({ trackId, dotsId, prevId, nextId }) {
 
   function goTo(idx) {
     current = idx;
-    const totalCards = cards.length;
+    const totalCards = visibleCards.length;
+
+    if (totalCards === 0) return;
 
     let startIndex = current * visibleCount;
     if (startIndex + visibleCount > totalCards) {
-      startIndex = totalCards - visibleCount;
+      startIndex = Math.max(totalCards - visibleCount, 0);
     }
 
     track.style.transform = "translateX(0)";
 
     const trackLeft = track.getBoundingClientRect().left;
-    const cardLeft = cards[startIndex].getBoundingClientRect().left;
-    currentOffset = cardLeft - trackLeft;
+    const cardLeft = visibleCards[startIndex].getBoundingClientRect().left;
+    const offset = cardLeft - trackLeft;
 
-    track.style.transform = `translateX(-${currentOffset}px)`;
+    track.style.transform = `translateX(-${offset}px)`;
     dots.forEach((d, i) => d.classList.toggle("active", i === current));
   }
 
@@ -68,9 +75,11 @@ function initSlider({ trackId, dotsId, prevId, nextId }) {
 
   buildDots();
   window.addEventListener("resize", buildDots);
+
+  return { refresh: buildDots };
 }
 
-initSlider({
+const projekSlider = initSlider({
   trackId: "track-projek",
   dotsId: "dots-projek",
   prevId: "btn-prev-projek",
@@ -104,6 +113,27 @@ function initTheme() {
     });
   }
 }
+
+// Live Demo Filter
+function initLiveDemoFilter(sliderInstance) {
+  const checkbox = document.getElementById("filter-live-demo");
+  const cards = document.querySelectorAll("#track-projek .row");
+
+  if (!checkbox) return;
+
+  checkbox.addEventListener("change", () => {
+    const onlyDemo = checkbox.checked;
+
+    cards.forEach((card) => {
+      const hasDemo = Boolean(card.dataset.demo);
+      card.style.display = onlyDemo && !hasDemo ? "none" : "";
+    });
+
+    if (sliderInstance) sliderInstance.refresh();
+  });
+}
+
+initLiveDemoFilter(projekSlider);
 
 // Language Options
 const translations = {
@@ -146,6 +176,7 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "Sertifikat",
     projects_title: "Projek",
+    projects_filter_live_demo: "Live Demo saja",
     projects_hue_hunt_durasi: "1 hari",
     projects_hue_hunt_peran: "Solo developer",
     projects_hue_hunt_alasan:
@@ -228,6 +259,7 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "Certificates",
     projects_title: "Projects",
+    projects_filter_live_demo: "Live Demo only",
     projects_hue_hunt_durasi: "1 day",
     projects_hue_hunt_peran: "Solo Developer",
     projects_hue_hunt_alasan:
@@ -310,6 +342,7 @@ const translations = {
     resume_experience_institution: "PT Goldstep Teknologi Indonesia",
     certificate_title: "証書",
     projects_title: "プロジェクト",
+    projects_filter_live_demo: "Live Demo only",
     projects_hue_hunt_durasi: "1日",
     projects_hue_hunt_peran: "個人開発",
     projects_hue_hunt_alasan:
@@ -410,6 +443,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLang();
   initCertModal();
   initImageModal();
+  initLiveDemoFilter();
   initMenuToggle();
   initScrollReveal();
 });

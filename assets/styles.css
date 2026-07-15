@@ -284,6 +284,58 @@ section {
   margin-right: 20px;
 }
 
+.projects-filter {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.filter-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: var(--p-font);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.filter-btn span,
+.filter-btn i {
+  color: inherit;
+}
+
+.filter-btn:hover {
+  background: var(--main-color);
+}
+
+.filter-btn i {
+  display: none;
+}
+
+.filter-checkbox:checked + .filter-btn {
+  background: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.filter-checkbox:checked + .filter-btn i {
+  display: inline-block;
+}
 .slider-wrapper {
   overflow: hidden;
   width: 100%;
@@ -988,6 +1040,15 @@ form .send-btn:hover {
   }
   .row img {
     height: 250px;
+  }
+
+  .projects-filter {
+    padding: 0 16px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    margin-top: 20px;
   }
 
   #modal-desc {
