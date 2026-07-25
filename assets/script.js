@@ -15,7 +15,7 @@ function initSlider({ trackId, dotsId, prevId, nextId }) {
 
   function getVisibleCards() {
     return Array.from(track.children).filter(
-      (card) => card.style.display !== "none"
+      (card) => card.style.display !== "none",
     );
   }
 
@@ -177,6 +177,12 @@ const translations = {
     certificate_title: "Sertifikat",
     projects_title: "Projek",
     projects_filter_live_demo: "Live Demo saja",
+    projects_dev_dash_durasi: "1 hari",
+    projects_dev_dash_peran: "Solo developer",
+    projects_dev_dash_alasan:
+      "Proyek ini dibuat sebagai proyek mandiri untuk mengasah kemampuan pengembangan web menggunakan HTML, CSS, dan JavaScript. Saya ingin membuat game yang tidak hanya menguji kecepatan mengetik, tetapi juga melatih fokus dan respons pengguna. Untuk memberikan pengalaman yang lebih unik, Dev Dash memiliki kategori Coding untuk melatih kecepatan mengetik saat menulis kode.",
+    projects_dev_dash_desc:
+      "Game tes kecepatan mengetik berbasis web yang menantang pemain untuk mengetik sebanyak mungkin dalam waktu yang ditentukan. Tersedia kategori Indonesian, English, dan Coding dengan beberapa tingkat kesulitan, fitur skor, serta fitur fitur lainnya.",
     projects_hue_hunt_durasi: "1 hari",
     projects_hue_hunt_peran: "Solo developer",
     projects_hue_hunt_alasan:
@@ -260,6 +266,12 @@ const translations = {
     certificate_title: "Certificates",
     projects_title: "Projects",
     projects_filter_live_demo: "Live Demo only",
+    projects_dev_dash_durasi: "1 day",
+    projects_dev_dash_peran: "Solo developer",
+    projects_dev_dash_alasan:
+      "This project was created as a personal project to improve my web development skills using HTML, CSS, and JavaScript. I wanted to create a game that not only tests typing speed but also helps users improve their focus and response time. To make the experience more unique, Dev Dash includes a Coding category designed to help users improve their typing speed while writing code.",
+    projects_dev_dash_desc:
+      "A web-based typing speed test game that challenges players to type as many words as possible within a set time limit. It features Indonesian, English, and Coding categories with multiple difficulty levels, a scoring system, and other supporting features.",
     projects_hue_hunt_durasi: "1 day",
     projects_hue_hunt_peran: "Solo Developer",
     projects_hue_hunt_alasan:
@@ -343,6 +355,12 @@ const translations = {
     certificate_title: "証書",
     projects_title: "プロジェクト",
     projects_filter_live_demo: "Live Demo only",
+    projects_dev_dash_durasi: "1日",
+    projects_dev_dash_peran: "個人開発",
+    projects_dev_dash_alasan:
+      "このプロジェクトは、HTML、CSS、JavaScriptを使用したWeb開発のスキルを向上させるために、個人プロジェクトとして制作しました。単にタイピング速度を測るだけでなく、ユーザーの集中力や反応速度も鍛えられるゲームを作りたいと考えました。よりユニークな体験を提供するため、コードを書く際のタイピング速度を向上させられるよう、Codingカテゴリーを追加しました。",
+    projects_dev_dash_desc:
+      "制限時間内にできるだけ多くの単語を入力することを目指す、Webベースのタイピング速度テストゲームです。Indonesian、English、Codingの3つのカテゴリーと複数の難易度、スコアシステムなどの機能を備えています。",
     projects_hue_hunt_durasi: "1日",
     projects_hue_hunt_peran: "個人開発",
     projects_hue_hunt_alasan:
@@ -552,7 +570,7 @@ function initImageModal() {
     } else {
       modalDemoBtn.style.display = "none";
     }
-    
+
     detailAlasan.setAttribute("data-lgn", card.dataset.alasanLgn);
     detailDurasi.setAttribute("data-lgn", card.dataset.durasiLgn);
     detailPeran.setAttribute("data-lgn", card.dataset.peranLgn);
