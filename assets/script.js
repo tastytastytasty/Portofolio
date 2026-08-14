@@ -177,6 +177,12 @@ const translations = {
     certificate_title: "Sertifikat",
     projects_title: "Projek",
     projects_filter_live_demo: "Live Demo saja",
+    projects_almost_won_durasi: "2 minggu",
+    projects_almost_won_peran: "Solo developer",
+    projects_almost_won_alasan:
+      "Proyek ini dibuat sebagai proyek mandiri untuk mengasah kemampuan pengembangan web menggunakan HTML, CSS, dan JavaScript sekaligus membuat media edukasi yang interaktif. Saya ingin membuat simulasi yang menunjukkan bagaimana permainan judi online dapat memengaruhi cara seseorang melihat kemenangan, kerugian, dan peluang. Almost Won dibuat sebagai simulasi dengan uang virtual agar pengguna dapat memahami risiko, probabilitas, dan pola psikologis dalam perjudian tanpa menggunakan uang asli.",
+    projects_almost_won_desc:
+      "Aplikasi simulasi judi online berbasis web untuk edukasi yang menggunakan uang virtual, membantu pengguna memahami peluang, kemenangan, kerugian, dan risiko perjudian melalui simulasi interaktif.",
     projects_dev_dash_durasi: "1 hari",
     projects_dev_dash_peran: "Solo developer",
     projects_dev_dash_alasan:
@@ -266,6 +272,12 @@ const translations = {
     certificate_title: "Certificates",
     projects_title: "Projects",
     projects_filter_live_demo: "Live Demo only",
+    projects_almost_won_durasi: "2 weeks",
+    projects_almost_won_peran: "Solo developer",
+    projects_almost_won_alasan:
+      "This project was created as an independent project to improve my web development skills using HTML, CSS, and JavaScript while creating an interactive educational medium. I wanted to create a simulation that demonstrates how online gambling can influence the way people perceive wins, losses, and probability. Almost Won uses virtual money to help users understand the risks, probabilities, and psychological patterns associated with gambling without using real money.",
+    projects_almost_won_desc:
+      "A web-based online gambling simulation for educational purposes that uses virtual money to help users understand probability, wins, losses, and gambling risks through an interactive simulation.",
     projects_dev_dash_durasi: "1 day",
     projects_dev_dash_peran: "Solo developer",
     projects_dev_dash_alasan:
@@ -355,6 +367,12 @@ const translations = {
     certificate_title: "証書",
     projects_title: "プロジェクト",
     projects_filter_live_demo: "Live Demo only",
+    projects_almost_won_durasi: "2週間",
+    projects_almost_won_peran: "個人開発",
+    projects_almost_won_alasan:
+      "このプロジェクトは、HTML、CSS、JavaScriptを使用したWeb開発のスキルを向上させると同時に、インタラクティブな教育コンテンツを作るための個人プロジェクトとして制作しました。オンラインギャンブルが勝ち負けや確率に対する人々の認識にどのような影響を与えるのかを、シミュレーションを通して示すことを目的としています。Almost Wonでは仮想通貨のみを使用し、実際のお金を使わずにギャンブルのリスク、確率、心理的なパターンについて学べるようにしています。",
+    projects_almost_won_desc:
+      "仮想通貨を使用した教育目的のオンラインギャンブルシミュレーションWebアプリです。インタラクティブなシミュレーションを通して、確率、勝敗、ギャンブルのリスクについて学ぶことができます。",
     projects_dev_dash_durasi: "1日",
     projects_dev_dash_peran: "個人開発",
     projects_dev_dash_alasan:
